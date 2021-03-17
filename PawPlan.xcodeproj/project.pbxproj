@@ -15,6 +15,9 @@
 		51C9959625FA75C100E848C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C9959425FA75C100E848C9 /* LaunchScreen.storyboard */; };
 		51C995A125FA75C100E848C9 /* PawPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C995A025FA75C100E848C9 /* PawPlanTests.swift */; };
 		51C995AC25FA75C100E848C9 /* PawPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C995AB25FA75C100E848C9 /* PawPlanUITests.swift */; };
+		AD1ABE6226023D730073AECD /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6126023D730073AECD /* Day.swift */; };
+		AD1ABE6426023E0F0073AECD /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6326023E0F0073AECD /* DayView.swift */; };
+		AD1ABE6626023EB80073AECD /* DayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6526023EB80073AECD /* DayDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		51C995A725FA75C100E848C9 /* PawPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawPlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C995AB25FA75C100E848C9 /* PawPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawPlanUITests.swift; sourceTree = "<group>"; };
 		51C995AD25FA75C100E848C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD1ABE6126023D730073AECD /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		AD1ABE6326023E0F0073AECD /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		AD1ABE6526023EB80073AECD /* DayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				51C9959425FA75C100E848C9 /* LaunchScreen.storyboard */,
 				51C9959725FA75C100E848C9 /* Info.plist */,
 				51C9959125FA75C100E848C9 /* Preview Content */,
+				AD1ABE6126023D730073AECD /* Day.swift */,
+				AD1ABE6326023E0F0073AECD /* DayView.swift */,
+				AD1ABE6526023EB80073AECD /* DayDetail.swift */,
 			);
 			path = PawPlan;
 			sourceTree = "<group>";
@@ -268,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				51C9958A25FA75C000E848C9 /* AppDelegate.swift in Sources */,
+				AD1ABE6626023EB80073AECD /* DayDetail.swift in Sources */,
 				51C9958C25FA75C000E848C9 /* SceneDelegate.swift in Sources */,
+				AD1ABE6426023E0F0073AECD /* DayView.swift in Sources */,
+				AD1ABE6226023D730073AECD /* Day.swift in Sources */,
 				51C9958E25FA75C000E848C9 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
