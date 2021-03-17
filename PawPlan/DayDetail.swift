@@ -20,15 +20,9 @@ struct DayDetail: View {
     
     var body: some View {
         VStack{
-            Image(contact.image)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .clipShape(Circle())
-                .frame(width: 300, height: 300, alignment: .center)
-            
             Form {
                 Section() {
-                    TextField("Username", text: $contact.name)
+                    TextField("Month", text: $contact.month)
                         .font(.system(size: 30))
                         .foregroundColor(.orange)
                     TextField("Email Address", text: $contact.email)
