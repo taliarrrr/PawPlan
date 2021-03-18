@@ -26,7 +26,7 @@ struct DayDetail: View {
             Text("\(day.dayOfWeek)")
                 .font(.system(size: 20))
             
-            
+            //will be for an event
             Form {
                 Section() {
                     TextField("Events", text: $day.month)
