@@ -11,38 +11,32 @@ import SwiftUI
 struct Card: View {
     
     @Binding var day: Day
+    @Binding var days : [Day]
     
     var body: some View {
-//        HStack{
-//            NavigationLink(<#LocalizedStringKey#>, destination: DayDetail(day: $day){
-//                VStack(alignment: .leading){
-//                    Text(day.month).font(.system(size: 30))
-//                        .foregroundColor(.orange)
-//                        .minimumScaleFactor(0.0001)
-//                        .lineLimit(1)
-//                    Text(day.day1).font(.system(size: 30))
-//                        .minimumScaleFactor(0.0001)
-//                        .lineLimit(1)
-//                    Text(day.year).font(.system(size: 30))
-//                    .foregroundColor(.orange)
-//                    .minimumScaleFactor(0.0001)
-//                    .lineLimit(1)
-//                }
-//            }
-//        )}
-//    }
-        Text("Hello World")
+        HStack{
+            NavigationLink(destination: DayDetail(day: $day, days: $days)){
+                VStack(alignment: .leading){
+                    Text(day.month).font(.system(size: 30))
+                        .foregroundColor(.orange)
+                        .minimumScaleFactor(0.0001)
+                        .lineLimit(1)
+                    Text(day.day1).font(.system(size: 30))
+                        .minimumScaleFactor(0.0001)
+                        .lineLimit(1)
+                    Text(day.year).font(.system(size: 30))
+                    .foregroundColor(.orange)
+                    .minimumScaleFactor(0.0001)
+                    .lineLimit(1)
+                }
+            }
+        }
+    }
 }
 
 
-//struct Card_Previews: PreviewProvider {
-//    static var previews: some View {
-//        Card(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")))
-//    }
-}
-
-struct DayView_Previews: PreviewProvider {
+struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        Card(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]))
     }
 }
