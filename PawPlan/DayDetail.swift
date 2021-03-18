@@ -34,20 +34,11 @@ struct DayDetail: View {
                         .foregroundColor(.orange)
                 }
                 
-                //                Section(){
-                //                   Picker(selection: $day.dayOfWeek, label: Text("Type")) {
-                //                        ForEach(0..<daysOfWeek.count){ i in
-                //                            Text(self.daysOfWeek[i])
-                //                        }
-                //                    }
-                //                }
-                
-                //            }
-                
-//                Button(action: {
-//                    Text("Choose Event")
-//                }) {
-//                        Text("Add Day")
+                //can't do it yet, need events class
+//                NavigationView{
+//                    List{
+//                        ForEach(
+//                    }
 //                }
                 
             }
