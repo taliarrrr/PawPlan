@@ -25,12 +25,14 @@ struct Card: View {
                         .minimumScaleFactor(0.0001)
                         .lineLimit(1)
                     Text(day.year).font(.system(size: 30))
-                    .foregroundColor(.orange)
-                    .minimumScaleFactor(0.0001)
-                    .lineLimit(1)
+                        .foregroundColor(.orange)
+                        .minimumScaleFactor(0.0001)
+                        .lineLimit(1)
                 }
             }
-        }
+        }.background(Color.white.opacity(0.7))
+            .cornerRadius(20)
+            .padding(.horizontal,10)
     }
 }
 
