@@ -1,5 +1,5 @@
 //
-//  Card.swift
+//  DayView.swift
 //  PawPlan
 //
 //  Created by Talia Lehrer (student LM) on 3/17/21.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Card: View {
+struct DayView: View {
     
     @Binding var day: Day
     @Binding var days : [Day]
@@ -39,6 +39,6 @@ struct Card: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        Card(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]))
+        DayView(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]))
     }
 }

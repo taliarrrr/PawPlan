@@ -33,20 +33,16 @@ struct DayDetail: View {
                         .font(.system(size: 30))
                         .foregroundColor(.orange)
                 }
-                
-                //can't do it yet, need events class
-//                NavigationView{
-//                    List{
-//                        ForEach(
-//                    }
-//                }
-                
             }
+
+            //can't do it yet, need events class
+            //doesn't do correct thing
+            AddButtonView(days: $days)
         }
     }
 }
-    struct ContactDetail_Previews: PreviewProvider {
-        static var previews: some View {
-            DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]))
-        }
+struct ContactDetail_Previews: PreviewProvider {
+    static var previews: some View {
+        DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]))
+    }
 }

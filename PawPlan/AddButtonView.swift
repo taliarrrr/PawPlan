@@ -8,21 +8,26 @@
 
 import SwiftUI
 
-//struct AddButtonView: View {
-//
-//    //for when we make a list of events, for now uses days
-//    @Binding var days : [Day]
-//
-//    var body: some View {
-//        NavigationLink(destination: DayDetail(day: Binding.constant(Day()), days: $days)) {
-//            Image(systemName: "plus")
-//                .foregroundColor(.black)
-//        }
-//    }
-//}
-//struct AddButtonView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        //will be events
-//        AddButtonView(days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]))
-//    }
-//}
+struct AddButtonView: View {
+
+    //for when we make a list of events, for now uses days
+    @Binding var days : [Day]
+
+    var body: some View {
+        //button is there, just doesn't do the right thing or go to the correct spot in navigation link
+        NavigationLink(destination: DayDetail(day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "")), days: $days)) {
+            Image(systemName: "plus")
+                .foregroundColor(.orange)
+                .scaleEffect(3)
+                .padding(.all, 20)
+                .padding(.trailing)
+            
+        }
+    }
+}
+struct AddButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        //will be events
+        AddButtonView(days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]))
+    }
+}
