@@ -9,8 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var days : [Day]
+    @State var day : Day
+    
+    
     var body: some View {
-        Text("Bye bye, World!")
+        ZStack{
+            NavigationView{
+                List{
+                    ForEach(days.indices, id: \.self){
+                        i in DayView(day:self.$days[i], days: self.$days)
+                    }
+                }.navigationBarTitle("Days")
+            }
+        }
     }
 }
 
