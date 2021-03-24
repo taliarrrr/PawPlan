@@ -15,7 +15,7 @@ struct AddButtonView: View {
 
     var body: some View {
         //button is there, just doesn't do the right thing or go to the correct spot in navigation link
-        NavigationLink(destination: DayDetail(day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "")), days: $days)) {
+        NavigationLink(destination: DayDetail(day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "")), days: $days, events: <#Binding<[Event]>#>)) {
             Image(systemName: "plus")
                 .foregroundColor(.orange)
                 .scaleEffect(3)
