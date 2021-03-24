@@ -15,6 +15,7 @@
 		51C9959625FA75C100E848C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C9959425FA75C100E848C9 /* LaunchScreen.storyboard */; };
 		51C995A125FA75C100E848C9 /* PawPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C995A025FA75C100E848C9 /* PawPlanTests.swift */; };
 		51C995AC25FA75C100E848C9 /* PawPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C995AB25FA75C100E848C9 /* PawPlanUITests.swift */; };
+		920D2DE89003B1BA3D7EA4DC /* Pods_PawPlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2360A8D461CE86ADDFE18D16 /* Pods_PawPlan.framework */; };
 		AD1ABE6426023E0F0073AECD /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6326023E0F0073AECD /* DayView.swift */; };
 		AD1ABE6626023EB80073AECD /* DayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6526023EB80073AECD /* DayDetail.swift */; };
 		AD1ABE68260244830073AECD /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE67260244830073AECD /* Day.swift */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2360A8D461CE86ADDFE18D16 /* Pods_PawPlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PawPlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BAF50B71D38D93AEE39AD77 /* Pods-PawPlan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PawPlan.release.xcconfig"; path = "Target Support Files/Pods-PawPlan/Pods-PawPlan.release.xcconfig"; sourceTree = "<group>"; };
 		51C9958625FA75C000E848C9 /* PawPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C9958925FA75C000E848C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C9958B25FA75C000E848C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		51C995A725FA75C100E848C9 /* PawPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawPlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C995AB25FA75C100E848C9 /* PawPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawPlanUITests.swift; sourceTree = "<group>"; };
 		51C995AD25FA75C100E848C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74C7CEDCE466FDEFE833B188 /* Pods-PawPlan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PawPlan.debug.xcconfig"; path = "Target Support Files/Pods-PawPlan/Pods-PawPlan.debug.xcconfig"; sourceTree = "<group>"; };
 		AD1ABE6326023E0F0073AECD /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		AD1ABE6526023EB80073AECD /* DayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetail.swift; sourceTree = "<group>"; };
 		AD1ABE67260244830073AECD /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920D2DE89003B1BA3D7EA4DC /* Pods_PawPlan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A0D4220E565C5904FC98B9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74C7CEDCE466FDEFE833B188 /* Pods-PawPlan.debug.xcconfig */,
+				3BAF50B71D38D93AEE39AD77 /* Pods-PawPlan.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		51C9957D25FA75C000E848C9 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +106,8 @@
 				51C9959F25FA75C100E848C9 /* PawPlanTests */,
 				51C995AA25FA75C100E848C9 /* PawPlanUITests */,
 				51C9958725FA75C000E848C9 /* Products */,
+				4A0D4220E565C5904FC98B9A /* Pods */,
+				BED27F856D88250A023496C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +165,14 @@
 			path = PawPlanUITests;
 			sourceTree = "<group>";
 		};
+		BED27F856D88250A023496C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2360A8D461CE86ADDFE18D16 /* Pods_PawPlan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +180,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51C995B025FA75C100E848C9 /* Build configuration list for PBXNativeTarget "PawPlan" */;
 			buildPhases = (
+				303D93764262BA684C4EFC59 /* [CP] Check Pods Manifest.lock */,
 				51C9958225FA75C000E848C9 /* Sources */,
 				51C9958325FA75C000E848C9 /* Frameworks */,
 				51C9958425FA75C000E848C9 /* Resources */,
+				21E8D4578A9D0111E0A8291C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +300,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21E8D4578A9D0111E0A8291C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PawPlan/Pods-PawPlan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PawPlan/Pods-PawPlan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PawPlan/Pods-PawPlan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		303D93764262BA684C4EFC59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PawPlan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		51C9958225FA75C000E848C9 /* Sources */ = {
@@ -448,6 +517,7 @@
 		};
 		51C995B125FA75C100E848C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74C7CEDCE466FDEFE833B188 /* Pods-PawPlan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -467,6 +537,7 @@
 		};
 		51C995B225FA75C100E848C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BAF50B71D38D93AEE39AD77 /* Pods-PawPlan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

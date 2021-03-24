@@ -29,9 +29,7 @@ struct DayDetail: View {
             //will be for an event
             Form {
                 Section() {
-                    TextField("Events", text: $day.month)
-                        .font(.system(size: 30))
-                        .foregroundColor(.orange)
+                    Text("Hi")
                 }
             }
 
