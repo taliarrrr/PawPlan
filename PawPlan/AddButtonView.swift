@@ -15,7 +15,7 @@ struct AddButtonView: View {
 
     var body: some View {
         //button is there, just doesn't do the right thing or go to the correct spot in navigation link
-        NavigationLink(destination: DayDetail(day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "")), days: $days, events: <#Binding<[Event]>#>)) {
+        NavigationLink(destination: DayDetail(day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [])), days: $days)) {
             Image(systemName: "plus")
                 .foregroundColor(.orange)
                 .scaleEffect(3)
@@ -28,6 +28,6 @@ struct AddButtonView: View {
 struct AddButtonView_Previews: PreviewProvider {
     static var previews: some View {
         //will be events
-        AddButtonView(days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]))
+        AddButtonView(days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]))
     }
 }

@@ -12,11 +12,10 @@ struct DayView: View {
     
     @Binding var day: Day
     @Binding var days : [Day]
-     @Binding var events : [Event]
     
     var body: some View {
         HStack{
-            NavigationLink(destination: DayDetail(day: $day, days: $days, events: $events)){
+            NavigationLink(destination: DayDetail(day: $day, days: $days)){
                 VStack(alignment: .leading){
                     Text(day.month).font(.system(size: 30))
                         .foregroundColor(.orange)
@@ -40,6 +39,6 @@ struct DayView: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]), events: Binding.constant([Event(type: "walk", description: "short")]))
+        DayView(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]))
     }
 }

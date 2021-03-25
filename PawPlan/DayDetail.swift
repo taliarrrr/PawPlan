@@ -13,7 +13,6 @@ struct DayDetail: View {
     @Binding var day : Day
     @Binding var days : [Day]
     @Environment(\.presentationMode) var presentation
-    @Binding var events : [Event]
     
     //change to something you want to choose from
     var daysOfWeek : [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
@@ -48,6 +47,6 @@ struct DayDetail: View {
 }
 struct ContactDetail_Previews: PreviewProvider {
     static var previews: some View {
-        DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")]), events: Binding.constant([Event(type: "walk", description: "short")]))
+        DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday")), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]))
     }
 }
