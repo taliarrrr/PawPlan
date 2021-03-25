@@ -38,16 +38,15 @@ struct DayView: View {
                         }
                         Text(day.dayOfWeek).font(.system(size: 20))
                     }
-                    
                 }.background(Color.white.opacity(0.9)).cornerRadius(20).cornerRadius(20)
                     .padding(.horizontal, 30).frame(width: 300, height: 40, alignment: .center)
             }
         }
     }
 }
-
-struct Card_Previews: PreviewProvider {
-    static var previews: some View {
-        DayView(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]))
-    }
+                
+                struct Card_Previews: PreviewProvider {
+                    static var previews: some View {
+                        DayView(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]))
+                    }
 }
