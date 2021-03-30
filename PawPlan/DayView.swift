@@ -17,7 +17,6 @@ struct DayView: View {
         ZStack{
             
             Image("background").frame(width: 390, height: 100, alignment: .bottomTrailing).cornerRadius(20)
-            
             HStack{
                 NavigationLink(destination: DayDetail(day: $day, days: $days)){
                     VStack{
@@ -27,7 +26,7 @@ struct DayView: View {
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
                             
-                            Text(day.day1).font(.system(size: 30))
+                            Text(day.day1 + ", ").font(.system(size: 30))
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
                             

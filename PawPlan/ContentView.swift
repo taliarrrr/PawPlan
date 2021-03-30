@@ -14,13 +14,10 @@ struct ContentView: View {
     
     @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
     
+    
     var body: some View {
         
         ZStack{
-            /*{
-             for i in 1...31{
-             days.insert(Day(year: 2021, month: "January", day1: i))
-             }*/
             NavigationView{
                 List{
                     ForEach(days.indices, id: \.self){
