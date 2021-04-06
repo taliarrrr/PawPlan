@@ -14,6 +14,9 @@ struct ContentView: View {
     
     @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
     
+    @State var events : [Event] = [Event(title: "Walking my dog", type: "Walk", description: "..."), Event(title: "feeding my dog", type: "feed", description: "...")]
+    @State var event : Event = Event(title: "", type: "", description: "")
+    
     var body: some View {
         
         ZStack{
@@ -24,7 +27,7 @@ struct ContentView: View {
             NavigationView{
                 List{
                     ForEach(days.indices, id: \.self){
-                        i in DayView(day: self.$days[i], days: self.$days)
+                        i in DayView(day: self.$days[i], days: self.$days, event: self.$event, events: self.$events)
                     }
                 }.navigationBarTitle("Days")
             }
