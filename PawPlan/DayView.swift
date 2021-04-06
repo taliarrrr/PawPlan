@@ -26,7 +26,7 @@ struct DayView: View {
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
                             
-                            Text(day.day1 + ", ").font(.system(size: 30))
+                            Text(String(day.day1) + ", ").font(.system(size: 30))
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
                             

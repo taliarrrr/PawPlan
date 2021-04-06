@@ -8,13 +8,18 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
-    
-    @State var days : [Day] = [Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Tuesday", events: []),Day(year: "2021", month: "March", day1: "2", dayOfWeek: "Wednesday", events: []),Day(year: "2021", month: "March", day1: "3", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "4", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "5", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "6", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "7", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "8", dayOfWeek: "Thursday", events: [])]
+    @State var count = 1
+    @State var days : [Day] = [Day(year: "2021", month: "March", day1: " ", dayOfWeek: "", events: []),Day(year: "2021", month: "March", day1: "2", dayOfWeek: "Wednesday", events: []),Day(year: "2021", month: "March", day1: "3", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "4", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "5", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "6", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "7", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "8", dayOfWeek: "Thursday", events: [])]
     
     @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
     
+    @State var date: Date = Date()
     
+    
+
     var body: some View {
         
         ZStack{
