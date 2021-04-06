@@ -28,22 +28,24 @@ struct DayDetail: View {
             Text("\(day.dayOfWeek)")
                 .font(.system(size: 20))
             
-            //will be for an event
-            Form {
-                Section(header: Text("Event")) {
-                    Text("Hi")
-                }
-            }
+           
 
-//            NavigationView{
-//                List{
-//
-//                }
-//            }
+            
+                NavigationView{
+                    List{
+                        ForEach(events.indices, id: \.self){
+                            i in
+                            EventView(event: self.$events[i], events: self.$events)
+                        }
+                    }.navigationBarTitle("Events")
+                        .navigationBarItems(trailing: AddButtonView(events: $events))
+                }
+            
+               
+            
             
             //can't do it yet, need events class
             //doesn't do correct thing
-            AddButtonView(events: $events)
         }
     }
 }
