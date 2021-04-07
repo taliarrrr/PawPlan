@@ -16,8 +16,19 @@ struct EventDetail: View {
     @Binding var events : [Event]
     
     @Environment(\.presentationMode) var presentation
+        
+    enum types : String, CaseIterable, Identifiable{
+        case Walk
+        case Feed
+        case Appointment
+        case Medicines
+        case Wash
+        
+        var id: String {self.rawValue}
+    }
     
-    var types : [String] = ["Walk","Feed", "Appointment", "Medicines", "Wash"]
+    @State var selectedType = types.Walk
+    
     var isInList : Bool = true
     
     var body: some View {
@@ -33,11 +44,13 @@ struct EventDetail: View {
                     
                 }
                 Section(){
-                    Picker(selection: $event.type, label: Text("Type")) {
-                        ForEach(0..<types.count){ i in
-                            Text(self.types[i])
+                        Picker("Type", selection: $selectedType) {
+                            Text("Walk").tag(types.Walk)
+                            Text("Feed").tag(types.Feed)
+                            Text("Appointment").tag(types.Appointment)
+                            Text("Medicines").tag(types.Medicines)
+                            Text("Wash").tag(types.Wash)
                         }
-                    }
                     
                 }
             }
