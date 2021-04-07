@@ -17,7 +17,7 @@ struct EventDetail: View {
     
     @Environment(\.presentationMode) var presentation
     
-    var types : [String] = ["Walk","Feed"]
+    var types : [String] = ["Walk","Feed", "Appointment", "Medicines", "Wash"]
     var isInList : Bool = true
 
     
