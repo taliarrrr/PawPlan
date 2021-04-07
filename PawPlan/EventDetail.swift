@@ -19,7 +19,6 @@ struct EventDetail: View {
     
     var types : [String] = ["Walk","Feed", "Appointment", "Medicines", "Wash"]
     var isInList : Bool = true
-
     
     var body: some View {
         VStack{
@@ -42,9 +41,9 @@ struct EventDetail: View {
                     
                 }
             }
-            
+
             Button(action: {
-                           if self.isInList {
+                if (self.isInList){
                                self.events.append(self.event)
                            }
                 self.events.sort(by: {$0.title < $1.title})
@@ -53,6 +52,7 @@ struct EventDetail: View {
                        }) {
                            if self.isInList{
                                Text("Save")
+
                            }
                            else{
                                Text("Edit")
