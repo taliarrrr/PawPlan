@@ -14,7 +14,7 @@ struct ContentView: View {
     
     @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
     
-    @State var events : [Event] = [Event(title: "Walking my dog", type: "Walk", description: "..."), Event(title: "feeding my dog", type: "feed", description: "...")]
+    @State var events : [Event] = [Event(title: "", type: "", description: "")]
     @State var event : Event = Event(title: "", type: "", description: "")
     
     var body: some View {

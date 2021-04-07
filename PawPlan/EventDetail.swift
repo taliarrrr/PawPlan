@@ -18,7 +18,7 @@ struct EventDetail: View {
     @Environment(\.presentationMode) var presentation
     
     var types : [String] = ["Walk","Feed"]
-    var save : Bool = true
+    var isInList : Bool = true
 
     
     var body: some View {
@@ -44,18 +44,18 @@ struct EventDetail: View {
             }
             
             Button(action: {
-                           if self.save {
+                           if self.isInList {
                                self.events.append(self.event)
                            }
                 self.events.sort(by: {$0.title < $1.title})
                            self.presentation.wrappedValue.dismiss()
                            
                        }) {
-                           if self.save{
+                           if self.isInList{
                                Text("Save")
                            }
                            else{
-                               Text("Edit Contact")
+                               Text("Edit")
                            }
                        }
             
@@ -65,7 +65,7 @@ struct EventDetail: View {
     
     struct EventDetail_Previews: PreviewProvider {
         static var previews: some View {
-            EventDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "String", type: "", description: "")]))
+            EventDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
         }
     }
 }
