@@ -7,21 +7,27 @@
 //
 
 import SwiftUI
+import Foundation
 
+func addTime(days: [Day], day: Day, date: Date, dateFormatter: DateFormatter) {
 
-
+    for day in days{
+        let dateString = dateFormatter.string(from: date.addingTimeInterval(86400))
+        day.day1 = dateString
+}
+}
 struct ContentView: View {
-    @State var count = 1
-    @State var days : [Day] = [Day(year: "2021", month: "March", day1: " ", dayOfWeek: "", events: []),Day(year: "2021", month: "March", day1: "2", dayOfWeek: "Wednesday", events: []),Day(year: "2021", month: "March", day1: "3", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "4", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "5", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "6", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "7", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "8", dayOfWeek: "Thursday", events: [])]
+    @State var date = Date()
+    
+    
+    @State var dateFormatter = DateFormatter()
+
+    @State var days : [Day] = [Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )]
+    
     
     @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
     
-    @State var date: Date = Date()
-    
-    
-
     var body: some View {
-        
         ZStack{
             NavigationView{
                 List{
@@ -31,6 +37,12 @@ struct ContentView: View {
                 }.navigationBarTitle("Days")
             }
         }
+        func changeDate(){
+            let current = Calendar.current
+            let day2 = current.component(.day, from: self.date)
+            self.data = Day(year: <#T##String#>, month: <#T##String#>, day1: <#T##String#>, dayOfWeek: <#T##String#>, events: <#T##[Event]#>)
+            
+        }
     }
 }
 
@@ -39,3 +51,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
