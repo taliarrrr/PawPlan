@@ -9,42 +9,45 @@
 import SwiftUI
 import Foundation
 
-func addTime(days: [Day], day: Day, date: Date, dateFormatter: DateFormatter) {
+
+/*func addTime(days: [Day], day: Day, date: Date, dateFormatter: DateFormatter) {
 
     for day in days{
         let dateString = dateFormatter.string(from: date.addingTimeInterval(86400))
         day.day1 = dateString
 }
-}
+}*/
 struct ContentView: View {
     @State var date = Date()
     
-    
-    @State var dateFormatter = DateFormatter()
+    @State var data : Day = Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(type: "", description: "")])
 
-    @State var days : [Day] = [Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )]
-    
+    @State var days : [Day] = []
     
     @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
     
     var body: some View {
-        ZStack{
-            NavigationView{
-                List{
-                    ForEach(days.indices, id: \.self){
-                        i in DayView(day: self.$days[i], days: self.$days)
-                    }
-                }.navigationBarTitle("Days")
-            }
-        }
         func changeDate(){
             let current = Calendar.current
             let day2 = current.component(.day, from: self.date)
-            self.data = Day(year: <#T##String#>, month: <#T##String#>, day1: <#T##String#>, dayOfWeek: <#T##String#>, events: <#T##[Event]#>)
+           self.data = Day(year: "", month: "", day1: String(day2), dayOfWeek: "", events: [Event(type: "", description: "")])
+            self.days.append(self.data)
+            self.date = date.addingTimeInterval(86400)
             
         }
+        changeDate()
+        ZStack{
+            NavigationView{
+                ForEach(days.indices, id: \.self){
+                    i in DayView(day: self.$days[i], days: self.$days)
+                    }
+                }.navigationBarTitle("Days")
+            }
+        
+        }
     }
-}
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
