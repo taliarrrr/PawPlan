@@ -17,9 +17,12 @@ struct ContentView: View {
     @State var events : [Event] = [Event(title: "", type: "", description: "")]
     @State var event : Event = Event(title: "", type: "", description: "")
     
+    @State var pet : Pet = Pet(name: "", dogOrCat: "", type: "")
+    
     var body: some View {
-        
+            
         ZStack{
+            
             /*{
              for i in 1...31{
              days.insert(Day(year: 2021, month: "January", day1: i))
@@ -30,6 +33,8 @@ struct ContentView: View {
                         i in DayView(day: self.$days[i], days: self.$days, event: self.$event, events: self.$events)
                     }
                 }.navigationBarTitle("Days")
+                    .navigationBarItems(trailing: InfoButtonView(pet: $pet))
+                
             }
         }
     }

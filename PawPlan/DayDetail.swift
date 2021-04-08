@@ -29,7 +29,7 @@ struct DayDetail: View {
                 .font(.system(size: 20))
             
            
-
+            
             
                 NavigationView{
                     List{
