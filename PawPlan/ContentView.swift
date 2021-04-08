@@ -29,47 +29,47 @@ struct ContentView: View {
               self.date = date.addingTimeInterval(86400)
               
           }*/
-    func createDates() -> [Day]{
+    func createDates(days: [Day]){
         for _ in 1...365{
             for a in 1...31{
-                self.days.append(Day(year: "2021", month: "January", day1: String(a), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "January", day1: "\(a)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for b in 1...30{
-                self.days.append(Day(year: "2021", month: "February", day1: String(b), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "February", day1: "\(b)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for c in 1...31{
-                self.days.append(Day(year: "2021", month: "March", day1: String(c), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "March", day1: "\(c)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for d in 1...30{
-                self.days.append(Day(year: "2021", month: "April", day1: String(d), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "April", day1: "\(d)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for e in 1...31{
-                self.days.append(Day(year: "2021", month: "May", day1: String(e), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "May", day1: "\(e)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for f in 1...30{
-                self.days.append(Day(year: "2021", month: "June", day1: String(f), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "June", day1: "\(f)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for g in 1...31{
-                self.days.append(Day(year: "2021", month: "July", day1: String(g), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "July", day1: "\(g)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for h in 1...30{
-                self.days.append(Day(year: "2021", month: "August", day1: String(h), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "August", day1: "\(h)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for j in 1...30{
-                self.days.append(Day(year: "2021", month: "September", day1: String(j), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "September", day1: "\(j)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for k in 1...31{
-                self.days.append(Day(year: "2021", month: "October", day1: String(k), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "October", day1: "\(k)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for l in 1...30{
-                self.days.append(Day(year: "2021", month: "November", day1: String(l), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "November", day1: "\(l)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
             for m in 1...31{
-                self.days.append(Day(year: "2021", month: "December", day1: String(m), dayOfWeek: "", events: [Event(type: "", description: "")]))
+                self.days.append(Day(year: "2021", month: "December", day1: "\(m)", dayOfWeek: "", events: [Event(type: "", description: "")]))
             }
            
         }
-         return self.days
+         
     }
 
     @State var days : [Day] = []
@@ -77,16 +77,15 @@ struct ContentView: View {
     @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
     
     var body: some View {
-       
-        ZStack{
-            
+        self.createDates(days: days)
+        
             NavigationView{
                 
                 ForEach(days.indices, id: \.self){
-                    i in DayView(day: self.$days[i], days: Binding.constant(self.createDates()))
+                    i in DayView(day: self.$days[i], days: self.$days)
                     }
                 }.navigationBarTitle("Days")
-            }
+            
         
         }
     }
