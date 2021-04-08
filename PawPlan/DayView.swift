@@ -11,12 +11,14 @@ import Foundation
 
 struct DayView: View {
     
+    
     @Binding var day: Day
     @Binding var days : [Day]
+   
     
     var body: some View {
         ZStack{
-            
+           
             Image("background").frame(width: 390, height: 100, alignment: .bottomTrailing).cornerRadius(20)
             HStack{
                 NavigationLink(destination: DayDetail(day: $day, days: $days)){
