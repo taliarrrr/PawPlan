@@ -18,7 +18,7 @@ struct ContentView: View {
     @State var event : Event = Event(title: "", type: "", description: "")
     
     @State var pet : Pet = Pet(name: "", dogOrCat: "", type: "")
-    
+        
     var body: some View {
             
         ZStack{
