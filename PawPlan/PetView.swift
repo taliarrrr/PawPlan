@@ -22,12 +22,15 @@ struct PetView: View {
                 TextField("Type", text: $pet.type)
                     .font(.system(size: 20))
                 Section(){
-                    Picker(selection: $pet.type, label: Text("Type")) {
+                    Picker(selection: $pet.dogOrCat, label: Text("Choose if dogOrCat")) {
                         ForEach(0..<types.count){ i in
                             Text(self.types[i])
                         }
                     }
+                    //variable that they chose
+                
                 }
+               // Text($pet.dogOrCat)
             }
         }
     }

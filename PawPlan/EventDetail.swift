@@ -16,7 +16,7 @@ struct EventDetail: View {
     @Binding var events : [Event]
     
     @Environment(\.presentationMode) var presentation
-        
+    
     enum types : String, CaseIterable, Identifiable{
         case Walk
         case Feed
@@ -44,33 +44,35 @@ struct EventDetail: View {
                     
                 }
                 Section(){
-                        Picker("Type", selection: $selectedType) {
-                            Text("Walk").tag(types.Walk)
-                            Text("Feed").tag(types.Feed)
-                            Text("Appointment").tag(types.Appointment)
-                            Text("Medicines").tag(types.Medicines)
-                            Text("Wash").tag(types.Wash)
-                        }
-                    
+                    Picker("Type", selection: $selectedType) {
+                        Text("Walk").tag(types.Walk)
+                        Text("Feed").tag(types.Feed)
+                        Text("Appointment").tag(types.Appointment)
+                        Text("Medicines").tag(types.Medicines)
+                        Text("Wash").tag(types.Wash)
+                    }
+                    TextField("\(selectedType.rawValue)", text: $event.type)
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
                 }
             }
-
+            
             Button(action: {
-                if (self.isInList){
-                               self.events.append(self.event)
-                           }
+                if (self.isInList == false){
+                    self.events.append(self.event)
+                }
                 self.events.sort(by: {$0.title < $1.title})
-                           self.presentation.wrappedValue.dismiss()
-                           
-                       }) {
-                           if self.isInList{
-                               Text("Save")
-
-                           }
-                           else{
-                               Text("Edit")
-                           }
-                       }
+                self.presentation.wrappedValue.dismiss()
+                
+            }) {
+                if self.isInList == false {
+                    Text("Save")
+                    
+                }
+                else{
+                    Text("Edit")
+                }
+            }
             
             
         }
