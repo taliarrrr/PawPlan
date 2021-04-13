@@ -22,7 +22,7 @@ struct DayView: View {
     var body: some View {
         ZStack{
            
-            Image("background").frame(width: 390, height: 100, alignment: .bottomTrailing).cornerRadius(20)
+            Image("background").frame(width: 390, height: 100, alignment: .bottomLeading).cornerRadius(20).scaledToFill()
             HStack{
                 NavigationLink(destination: DayDetail(day: $day, days: $days, event: $event, events: $events)){
                     VStack{
