@@ -104,15 +104,17 @@ struct ContentView: View {
     
    
     var body: some View {
-        VStack{
+        ZStack{
+            List{
             NavigationView{
-        
+                
                 ForEach(days.indices, id: \.self){
                     i in
-                    DayView(day: self.$days[i], days: self.$days, event: self.$events[i], events: self.$events)
+                    DayView(day: self.$days[i], days: self.$days, event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
                 
                 }
-            }.navigationBarTitle("Days")
+                }
+            }//.navigationBarTitle("Days")
         }//.onAppear{self.createDates()}
         
     }
