@@ -10,11 +10,13 @@ import Foundation
 
 class Event: Identifiable{
     
+    var title : String
     var type : String
     var description : String
     
 
-    init(type : String, description: String){
+    init(title : String, type : String, description: String){
+        self.title = title
         self.type = type
         self.description = description
     }
