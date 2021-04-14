@@ -10,14 +10,14 @@ import SwiftUI
 
 struct EventDetail: View {
     
-    @Binding var day : Day
-    @Binding var days : [Day]
+
     @Binding var event : Event
     @Binding var events : [Event]
     
     @Environment(\.presentationMode) var presentation
     
     enum types : String, CaseIterable, Identifiable{
+        case pick
         case Walk
         case Feed
         case Appointment
@@ -27,7 +27,8 @@ struct EventDetail: View {
         var id: String {self.rawValue}
     }
     
-    @State var selectedType = types.Walk
+    @State var selectedType = types.pick
+    
     
     var isInList : Bool = true
     
@@ -43,29 +44,57 @@ struct EventDetail: View {
                         .foregroundColor(.black)
                     
                 }
+                
+                    
                 Section(){
-                    Picker("Type", selection: $selectedType) {
+                    Picker("Type", selection: $selectedType ) {
+                        Text("pick one").tag(types.pick).foregroundColor(.purple)
                         Text("Walk").tag(types.Walk)
                         Text("Feed").tag(types.Feed)
                         Text("Appointment").tag(types.Appointment)
                         Text("Medicines").tag(types.Medicines)
                         Text("Wash").tag(types.Wash)
                     }
+                    
+//                    TextField("\(selectedType.rawValue)", text: $event.type)
+                    
                     TextField("\(selectedType.rawValue)", text: $event.type)
                         .font(.system(size: 20))
                         .foregroundColor(.black)
+                        
+
                 }
+                
+                
+                    Section(){
+                                        Picker("Type", selection: $selectedType ) {
+                                            Text("pick one").tag(types.pick).foregroundColor(.purple)
+                                            Text("Walk").tag(types.Walk)
+                                            Text("Feed").tag(types.Feed)
+                                            Text("Appointment").tag(types.Appointment)
+                                            Text("Medicines").tag(types.Medicines)
+                                            Text("Wash").tag(types.Wash)
+                                        }
+                                        
+                    //                    TextField("\(selectedType.rawValue)", text: $event.type)
+                                        
+                                        TextField("\(selectedType.rawValue)", text: $event.type)
+                                            .font(.system(size: 20))
+                                            .foregroundColor(.black)
+                }
+                
             }
             
             Button(action: {
-                if (self.isInList == false){
-                    self.events.append(self.event)
+                if (!self.isInList){
+                    self.events.append(Event(title: self.event.title, type: self.selectedType.rawValue, description: self.event.description))
                 }
                 self.events.sort(by: {$0.title < $1.title})
                 self.presentation.wrappedValue.dismiss()
+                self.event.type = self.selectedType.rawValue
                 
             }) {
-                if self.isInList == false {
+                if !self.isInList {
                     Text("Save")
                     
                 }
@@ -80,7 +109,7 @@ struct EventDetail: View {
     
     struct EventDetail_Previews: PreviewProvider {
         static var previews: some View {
-            EventDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
+            EventDetail(event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
         }
     }
 }

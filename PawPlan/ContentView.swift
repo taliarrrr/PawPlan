@@ -19,6 +19,7 @@ struct ContentView: View {
     
     @State var pet : Pet = Pet(name: "", dogOrCat: "", type: "")
         
+    
     var body: some View {
             
         ZStack{

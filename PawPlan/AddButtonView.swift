@@ -11,10 +11,11 @@ import SwiftUI
 struct AddButtonView: View {
     
     @Binding var events : [Event]
+    @Binding var event : Event
     
     var body: some View {
 
-        NavigationLink(destination: EventDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "String", type: "", description: "")]), isInList: false)) {
+        NavigationLink(destination: EventDetail(event: Binding.constant(Event(title: "", type: "others...", description: "")), events: $events, isInList: false)) {
             Image(systemName: "plus")
                 .foregroundColor(.black)
             
@@ -24,6 +25,6 @@ struct AddButtonView: View {
 struct AddButtonView_Previews: PreviewProvider {
     static var previews: some View {
         //will be events
-        AddButtonView(events: Binding.constant([Event(title: "", type: "", description: "")]))
+        AddButtonView(events: Binding.constant([Event(title: "", type: "", description: "")]), event: Binding.constant(Event(title: "", type: "", description: "")))
     }
 }
