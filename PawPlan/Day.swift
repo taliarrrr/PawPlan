@@ -16,12 +16,14 @@ class Day: Identifiable{
     var day1 : String
     var dayOfWeek : String
     var events : [Event]
-
-    init(year : String, month : String, day1 : String, dayOfWeek : String, events : [Event]){
+    var event : Event
+    
+    init(year : String, month : String, day1 : String, dayOfWeek : String, events : [Event], event : Event){
         self.year = year
         self.month = month
         self.day1 = day1
         self.dayOfWeek = dayOfWeek
         self.events = events
+        self.event = event
     }
 }

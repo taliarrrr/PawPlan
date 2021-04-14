@@ -10,9 +10,9 @@ import SwiftUI
 
 struct EventDetail: View {
     
-    @Binding var
     @Binding var event : Event
     @Binding var events : [Event]
+    @Binding var day : Day
     
     @Environment(\.presentationMode) var presentation
     
@@ -23,16 +23,16 @@ struct EventDetail: View {
         VStack{
             Form{
                 Section() {
-                    TextField("Title", text: $event.title)
+                    TextField("Title", text: $day.event.title)
                         .font(.system(size: 30))
                         .foregroundColor(.black)
-                    TextField("Description", text: $event.description)
+                    TextField("Description", text: $day.event.description)
                         .font(.system(size: 20))
                         .foregroundColor(.black)
                 }
                 
                 Section(){
-                    Picker("Type", selection: $event.type ) {
+                    Picker("Type", selection: $day.event.type ) {
                         Text(" ").tag(types.pick)
                         Text("Walk").tag(types.Walk)
                         Text("Feed").tag(types.Feed)
@@ -49,9 +49,9 @@ struct EventDetail: View {
             
             Button(action: {
                 if (!self.isInList){
-                    self.events.append(self.event)
+                    self.day.events.append(self.event)
                 }
-                self.events.sort(by: {$0.title < $1.title})
+                self.day.events.sort(by: {$0.title < $1.title})
                 self.presentation.wrappedValue.dismiss()
                 
             }) {
@@ -70,7 +70,7 @@ struct EventDetail: View {
     
     struct EventDetail_Previews: PreviewProvider {
         static var previews: some View {
-            EventDetail(event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: Binding.constant([Event(title: "", type: types.pick, description: "")]))
+            EventDetail(event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: Binding.constant([Event(title: "", type: types.pick, description: "")]), day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: types.pick, description: "")], event: Event(title: "", type: types.pick, description: ""))))
         }
     }
 }

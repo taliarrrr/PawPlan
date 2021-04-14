@@ -10,18 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var days : [Day] = [Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Tuesday", events: []),Day(year: "2021", month: "March", day1: "2", dayOfWeek: "Wednesday", events: []),Day(year: "2021", month: "March", day1: "3", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "4", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "5", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "6", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "7", dayOfWeek: "Thursday", events: []), Day(year: "2021", month: "March", day1: "8", dayOfWeek: "Thursday", events: [])]
+    @State var days : [Day] = [Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Tuesday", events: [], event: Event(title: "", type: types.pick, description: "")),Day(year: "2021", month: "March", day1: "2", dayOfWeek: "Wednesday", events: [], event: Event(title: "", type: types.pick, description: "")),Day(year: "2021", month: "March", day1: "3", dayOfWeek: "Thursday", events: [], event: Event(title: "", type: types.pick, description: "")), Day(year: "2021", month: "March", day1: "4", dayOfWeek: "Thursday", events: [], event: Event(title: "", type: types.pick, description: "")), Day(year: "2021", month: "March", day1: "5", dayOfWeek: "Thursday", events: [], event: Event(title: "", type: types.pick, description: "")), Day(year: "2021", month: "March", day1: "6", dayOfWeek: "Thursday", events: [], event: Event(title: "", type: types.pick, description: "")), Day(year: "2021", month: "March", day1: "7", dayOfWeek: "Thursday", events: [], event: Event(title: "", type: types.pick, description: "")), Day(year: "2021", month: "March", day1: "8", dayOfWeek: "Thursday", events: [], event: Event(title: "", type: types.pick, description: ""))]
     
-    @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
+    @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [], event: Event(title: "", type: types.pick, description: "") )
     
     @State var events : [Event] = [Event(title: "", type: types.pick, description: "")]
     @State var event : Event = Event(title: "", type: types.pick, description: "")
     
     @State var pet : Pet = Pet(name: "", dogOrCat: "", type: typesOfPets.dog)
-        
+    
     
     var body: some View {
-            
+        
         ZStack{
             
             /*{
