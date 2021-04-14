@@ -10,6 +10,7 @@ import SwiftUI
 
 struct DayDetail: View {
     
+    
     @Binding var day : Day
     @Binding var days : [Day]
     @Binding var event : Event
