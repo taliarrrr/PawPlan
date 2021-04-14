@@ -101,23 +101,26 @@ struct ContentView: View {
     
     @State var event : Event = Event(title: "", type: "", description: "")
     
+    @State var month = Month(month: "January")
     
+    @State var months = [Month(month: "January"), Month(month:"February"),Month(month:"March"), Month(month:"April"), Month(month: "May"), Month(month:"June"), Month(month:"July"), Month(month:"August"), Month(month:"September"), Month(month:"October"), Month(month: "November"), Month(month:"December")  ]
     
     var body: some View {
         
         
         NavigationView{
             List{
-                ForEach(days.indices, id: \.self){
+                ForEach(months.indices, id: \.self){
                     i in
-                    DayView(day: self.$days[i], days: self.$days, event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
+                    MonthView( months: self.$months,month: self.$months[i], day: self.$days[i], days: self.$days, event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
                 }
-            }.navigationBarTitle("Days")
+            }.navigationBarTitle("Months")
         }
         
     }
-    
 }
+    
+
 
 
 

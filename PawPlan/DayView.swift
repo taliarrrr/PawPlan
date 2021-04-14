@@ -22,7 +22,7 @@ struct DayView: View {
     var body: some View {
         ZStack{
            
-            Image("background").frame(width: 390, height: 100, alignment: .bottomLeading).cornerRadius(20).scaledToFill()
+           // Image("background").frame(width: 390, height: 100, alignment: .bottomLeading).cornerRadius(20).scaledToFill()
             HStack{
                 NavigationLink(destination: DayDetail(day: $day, days: $days, event: $event, events: $events)){
                     VStack{
@@ -31,7 +31,7 @@ struct DayView: View {
                                 .foregroundColor(.orange)
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
-                            
+                        
                             Text(String(day.day1) + ", ").font(.system(size: 30))
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
@@ -41,7 +41,7 @@ struct DayView: View {
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
                         }
-                        Text(day.dayOfWeek).font(.system(size: 20))
+                        //Text(day.dayOfWeek).font(.system(size: 20))
                     }
                 }.background(Color.white.opacity(0.9)).cornerRadius(20).cornerRadius(20)
                     .padding(.horizontal, 30).frame(width: 300, height: 40, alignment: .center)
