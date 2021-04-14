@@ -15,7 +15,7 @@ struct AddButtonView: View {
     
     var body: some View {
 
-        NavigationLink(destination: EventDetail(event: Binding.constant(Event(title: "", type: "others...", description: "")), events: $events, isInList: false)) {
+        NavigationLink(destination: EventDetail(event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: $events, isInList: false)) {
             Image(systemName: "plus")
                 .foregroundColor(.black)
             
@@ -25,6 +25,6 @@ struct AddButtonView: View {
 struct AddButtonView_Previews: PreviewProvider {
     static var previews: some View {
         //will be events
-        AddButtonView(events: Binding.constant([Event(title: "", type: "", description: "")]), event: Binding.constant(Event(title: "", type: "", description: "")))
+        AddButtonView(events: Binding.constant([Event(title: "", type: types.pick, description: "")]), event: Binding.constant(Event(title: "", type: types.pick, description: "")))
     }
 }

@@ -11,7 +11,8 @@ import SwiftUI
 struct PetView: View {
     
     @Binding var pet : Pet
-    var types : [String] = ["Dog", "Cat"]
+    @Environment(\.presentationMode) var presentation
+    
     
     var body: some View {
         Form {
@@ -19,25 +20,24 @@ struct PetView: View {
                 TextField("Name", text: $pet.name)
                     .font(.system(size: 30))
                     .foregroundColor(.orange)
-                TextField("Type", text: $pet.type)
+                TextField("Type", text: $pet.dogOrCat)
                     .font(.system(size: 20))
+                
                 Section(){
-                    Picker(selection: $pet.dogOrCat, label: Text("Choose if dogOrCat")) {
-                        ForEach(0..<types.count){ i in
-                            Text(self.types[i])
+                    Picker("meow or woof", selection: $pet.type ) {
+                        Text("").tag(typesOfPets.pick)
+                        Text("Dog").tag(typesOfPets.dog)
+                        Text("Cat").tag(typesOfPets.cat)
                         }
                     }
-                    //variable that they chose
-                
                 }
-               // Text($pet.dogOrCat)
             }
         }
     }
-}
+
 
 struct PetView_Previews: PreviewProvider {
     static var previews: some View {
-        PetView(pet: Binding.constant(Pet(name: "", dogOrCat: "", type: "")))
+        PetView(pet: Binding.constant(Pet(name: "", dogOrCat: "", type: typesOfPets.dog)))
     }
 }

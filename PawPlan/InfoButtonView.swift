@@ -24,6 +24,6 @@ struct InfoButtonView: View {
 
 struct InfoButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoButtonView(pet: Binding.constant(Pet(name: "", dogOrCat: "", type: "")))
+        InfoButtonView(pet: Binding.constant(Pet(name: "", dogOrCat: "", type: typesOfPets.dog)))
     }
 }

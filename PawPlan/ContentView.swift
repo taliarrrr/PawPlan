@@ -14,10 +14,10 @@ struct ContentView: View {
     
     @State var day : Day = Day(year: "2021", month: "March", day1: "24", dayOfWeek: "Tuesday", events: [] )
     
-    @State var events : [Event] = [Event(title: "", type: "", description: "")]
-    @State var event : Event = Event(title: "", type: "", description: "")
+    @State var events : [Event] = [Event(title: "", type: types.pick, description: "")]
+    @State var event : Event = Event(title: "", type: types.pick, description: "")
     
-    @State var pet : Pet = Pet(name: "", dogOrCat: "", type: "")
+    @State var pet : Pet = Pet(name: "", dogOrCat: "", type: typesOfPets.dog)
         
     
     var body: some View {

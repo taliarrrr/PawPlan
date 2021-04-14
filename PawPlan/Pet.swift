@@ -8,14 +8,22 @@
 
 import Foundation
 
+enum typesOfPets : String, CaseIterable, Identifiable{
+    case pick
+    case dog
+    case cat
+    
+    var id: String {self.rawValue}
+}
+
 class Pet: Identifiable{
     
     var name : String
     var dogOrCat : String
-    var type : String
+    var type : typesOfPets
     
 
-    init(name : String, dogOrCat : String, type: String){
+    init(name : String, dogOrCat : String, type: typesOfPets){
         self.name = name
         self.dogOrCat = dogOrCat
         self.type = type
