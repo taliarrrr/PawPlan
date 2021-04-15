@@ -16,6 +16,7 @@ struct MonthView: View {
     @Binding var event : Event
     @Binding var events : [Event]
     
+    
     var body: some View {
         HStack{
         NavigationLink(destination: DayView(day: $day, days: $days, event: $event, events: $events)){

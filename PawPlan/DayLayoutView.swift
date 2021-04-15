@@ -19,6 +19,7 @@ struct DayLayoutView: View {
         HStack{
         NavigationLink(destination: DayView(day: $day, days: $days, event: $event, events: $events)){
             List{
+               
                 ForEach(days.indices, id: \.self){
                                             i in
                                                DayView(day: self.$days[i], days: self.$days, event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))

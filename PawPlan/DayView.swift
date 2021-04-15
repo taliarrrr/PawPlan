@@ -12,6 +12,7 @@ import Foundation
 struct DayView: View {
     
     
+    
     @Binding var day: Day
     @Binding var days : [Day]
 
@@ -27,6 +28,9 @@ struct DayView: View {
                 NavigationLink(destination: DayDetail(day: $day, days: $days, event: $event, events: $events)){
                     VStack{
                         HStack{
+                            if day.month == "January"{
+                                
+                            }
                             Text("   " + day.month).font(.system(size: 30))
                                 .foregroundColor(.orange)
                                 .minimumScaleFactor(0.0001)
