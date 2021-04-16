@@ -51,7 +51,7 @@ struct MonthDetail: View {
                     }
                 }
             }
-          else  if month.month == "March"{
+            else  if month.month == "March"{
                 List{
                     ForEach(march.indices, id: \.self){
                         i in DayView(day: self.$march[i], days: self.$march, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april,  may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
@@ -65,14 +65,14 @@ struct MonthDetail: View {
                     }
                 }
             }
-           else if month.month == "May"{
+            else if month.month == "May"{
                 List{
                     ForEach(may.indices, id: \.self){
                         i in DayView(day: self.$may[i], days: self.$may, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
                     }
                 }
             }
-           else if month.month == "June"{
+            else if month.month == "June"{
                 List{
                     ForEach(june.indices, id: \.self){
                         i in DayView(day: self.$june[i], days: self.$june, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
@@ -87,13 +87,13 @@ struct MonthDetail: View {
                 }
             }
             else if month.month == "August"{
-               List{
+                List{
                     ForEach(august.indices, id: \.self){
                         i in DayView(day: self.$august[i], days: self.$august, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
                     }
                 }
             }
-           else if month.month == "September"{
+            else if month.month == "September"{
                 List{
                     ForEach(sept.indices, id: \.self){
                         i in DayView(day: self.$sept[i], days: self.$sept, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
@@ -107,19 +107,19 @@ struct MonthDetail: View {
                     }
                 }
             }
-           else if month.month == "November"{
+            else if month.month == "November"{
                 List{
-                                  ForEach(nov.indices, id: \.self){
-                                    i in DayView(day: self.$nov[i], days: self.$nov, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
-                                  }
-                              }
+                    ForEach(nov.indices, id: \.self){
+                        i in DayView(day: self.$nov[i], days: self.$nov, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
+                    }
+                }
             }
             else if month.month == "December"{
                 List{
-                                                 ForEach(dec.indices, id: \.self){
-                                                    i in DayView(day: self.$dec[i], days: self.$dec, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
-                                                 }
-                                             }
+                    ForEach(dec.indices, id: \.self){
+                        i in DayView(day: self.$dec[i], days: self.$dec, event: self.$event, events: self.$events, jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
+                    }
+                }
             }
         }.navigationBarTitle("Days")
         
