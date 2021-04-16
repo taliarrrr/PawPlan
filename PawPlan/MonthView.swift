@@ -19,14 +19,13 @@ struct MonthView: View {
     
     var body: some View {
         HStack{
-            NavigationLink(destination: MonthDetail(months: $months, month: $month, day: $day, days: $days, event: $event, events: $events, body: <#some View#>)){
-            Text("\(month.month)").font(.system(size: 30))
-            .foregroundColor(.orange)
-            .minimumScaleFactor(0.0001)
-            .lineLimit(1)
+            NavigationLink(destination: MonthDetail(months: $months, month: $month, day: $day, days: $days, event: $event, events: $events)){
+                Text(month.month)
+                    
+        }
+    
         }
     }
-}
 
 struct MonthView_Previews: PreviewProvider {
     static var previews: some View {

@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct MonthDetail: View {
+    
+    func sort(){
+        
+    }
        @Binding var months : [Month]
        @Binding var month : Month
        @Binding var day: Day
@@ -19,13 +23,19 @@ struct MonthDetail: View {
     
     
     var body: some View {
-        
+        NavigationLink(destination: DayDetail(day: $day, days: $days, event: $event, events: $events)){
+            if month.month == "January"{
+                List{
+                    Text("Jan 1")
+                    Text("Jan 2")
                 }
             }
+        }
+              
         
         
        
-    }
+    
 }
 
 struct MonthDetail_Previews: PreviewProvider {

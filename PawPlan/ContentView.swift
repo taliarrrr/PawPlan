@@ -115,32 +115,13 @@ struct ContentView: View {
     
     var body: some View {
         
-        List{
-        Button(action: {
-            NavigationLink{
-                List{
-                    ForEach(jan.indices, id: \.self){
-                        i in
-                        DayView(day: $jan[i], days: $jan, event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
-                    }
-                }
-            }
-        }) {
-            Text("January ").onTapGesture(count: 1) {
-            }
-        
-            }
-        
-        
-        
-        
-        /*NavigationView{
+    NavigationView{
             List{
                 ForEach(months.indices, id: \.self){
                     i in
                     MonthView( months: self.$months,month: self.$months[i], day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: "", description: "")])), days: Binding.constant([Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: "", description: "")])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
                 }
-            }.navigationBarTitle("Months")*/
+            }.navigationBarTitle("Months")
         }
         
     }
