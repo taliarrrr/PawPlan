@@ -19,7 +19,7 @@ struct MonthView: View {
     
     var body: some View {
         HStack{
-        NavigationLink(destination: MonthDetail(day: $day, days: $days, event: $event, events: $events)){
+            NavigationLink(destination: MonthDetail(months: $months, month: $month, day: $day, days: $days, event: $event, events: $events, body: <#some View#>)){
             Text("\(month.month)").font(.system(size: 30))
             .foregroundColor(.orange)
             .minimumScaleFactor(0.0001)

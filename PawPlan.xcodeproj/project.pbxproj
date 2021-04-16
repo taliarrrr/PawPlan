@@ -19,6 +19,7 @@
 		51D85F05262720ED00ED897D /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F04262720ED00ED897D /* MonthView.swift */; };
 		51D85F072627221300ED897D /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F062627221300ED897D /* Month.swift */; };
 		51D85F0D26287FC700ED897D /* MonthDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F0C26287FC700ED897D /* MonthDetail.swift */; };
+		51D85F0F2628856900ED897D /* MonthButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F0E2628856900ED897D /* MonthButtonsView.swift */; };
 		AD1ABE6426023E0F0073AECD /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6326023E0F0073AECD /* DayView.swift */; };
 		AD1ABE6626023EB80073AECD /* DayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6526023EB80073AECD /* DayDetail.swift */; };
 		AD1ABE68260244830073AECD /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE67260244830073AECD /* Day.swift */; };
@@ -64,6 +65,7 @@
 		51D85F04262720ED00ED897D /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		51D85F062627221300ED897D /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		51D85F0C26287FC700ED897D /* MonthDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDetail.swift; sourceTree = "<group>"; };
+		51D85F0E2628856900ED897D /* MonthButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthButtonsView.swift; sourceTree = "<group>"; };
 		AD1ABE6326023E0F0073AECD /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		AD1ABE6526023EB80073AECD /* DayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetail.swift; sourceTree = "<group>"; };
 		AD1ABE67260244830073AECD /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				51D85F04262720ED00ED897D /* MonthView.swift */,
 				51D85F062627221300ED897D /* Month.swift */,
 				51D85F0C26287FC700ED897D /* MonthDetail.swift */,
+				51D85F0E2628856900ED897D /* MonthButtonsView.swift */,
 			);
 			path = PawPlan;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51D85F0F2628856900ED897D /* MonthButtonsView.swift in Sources */,
 				AD938E40260B742000C39C22 /* Event.swift in Sources */,
 				AD1ABE6A260252600073AECD /* AddButtonView.swift in Sources */,
 				51C9958A25FA75C000E848C9 /* AppDelegate.swift in Sources */,
