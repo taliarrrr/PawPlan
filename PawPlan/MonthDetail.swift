@@ -19,16 +19,21 @@ struct MonthDetail: View {
        @Binding var days : [Day]
        @Binding var event : Event
        @Binding var events : [Event]
+    @Binding var jan: [Day]
     
     
     
     var body: some View {
         NavigationLink(destination: DayDetail(day: $day, days: $days, event: $event, events: $events)){
             if month.month == "January"{
-                List{
-                    Text("Jan 1")
-                    Text("Jan 2")
+                NavigationView{
+                    List{
+                        ForEach(jan.indices, id: \.self)
+                        i in DayView(
+                    }
                 }
+                    
+                
             }
         }
               
@@ -40,7 +45,7 @@ struct MonthDetail: View {
 
 struct MonthDetail_Previews: PreviewProvider {
     static var previews: some View {
-        MonthDetail(months: Binding.constant([Month(month: "January")]), month: Binding.constant(Month(month: "January")), day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: "", description: "")])) , days: Binding.constant([Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: "", description: "")])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
+        MonthDetail(months: Binding.constant([Month(month: "January")]), month: Binding.constant(Month(month: "January")), day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: "", description: "")])) , days: Binding.constant([Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: "", description: "")])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]), jan: Binding.constant([Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: "", description: "")])]))
     }
 }
 }

@@ -18,6 +18,7 @@ struct DayView: View {
 
     @Binding var event : Event
     @Binding var events : [Event]
+    @Binding var jan: [Day]
     
     
     var body: some View {
@@ -54,6 +55,6 @@ struct DayView: View {
                 
                 struct Day_Previews: PreviewProvider {
                     static var previews: some View {
-                        DayView(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
+                        DayView(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]), jan: Binding.constant([Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: "", description: "")])]))
                     }
 }
