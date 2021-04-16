@@ -33,7 +33,10 @@ struct MonthView: View {
     var body: some View {
         HStack{
             NavigationLink(destination: MonthDetail(months: $months, month: $month, day: $day, days: $days, event: $event, events: $events, jan: $jan, feb: $feb, march: $march, april: $april, may: $may, june: $june, july: $july, august: $august, sept: $sept, oct: $oct , nov: $nov, dec: $dec)){
-                Text(month.month)
+                Text(month.month).font(.system(size: 30))
+                .foregroundColor(.orange)
+                .minimumScaleFactor(0.0001)
+                .lineLimit(1)
                 
             }
             

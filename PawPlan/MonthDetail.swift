@@ -121,7 +121,7 @@ struct MonthDetail: View {
                     }
                 }
             }
-        }.navigationBarTitle("Days")
+        }.navigationBarTitle("Days 2021")
         
         
     }
