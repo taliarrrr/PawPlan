@@ -10,6 +10,7 @@ import SwiftUI
 
 struct DayDetail: View {
     
+    
     @Binding var day : Day
     @Binding var days : [Day]
     @Binding var event : Event
@@ -29,16 +30,16 @@ struct DayDetail: View {
                 .font(.system(size: 20))
             
            
-
+            
             
                 NavigationView{
                     List{
                         ForEach(events.indices, id: \.self){
                             i in
-                            EventView(event: self.$events[i], events: self.$events)
+                            EventView(event: self.$events[i], events: self.$events, day: self.$day)
                         }
                     }.navigationBarTitle("Events")
-                        .navigationBarItems(trailing: AddButtonView(events: $events))
+                        .navigationBarItems(trailing: AddButtonView(events: $events, event: $event, day: self.$day))
                 }
             
                
@@ -51,6 +52,6 @@ struct DayDetail: View {
 }
 struct ContactDetail_Previews: PreviewProvider {
     static var previews: some View {
-        DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "", type: "", description: "")]))
+        DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [], event: Event(title: "", type: types.pick, description: ""))), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [], event: Event(title: "", type: types.pick, description: ""))]), event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: Binding.constant([Event(title: "", type: types.pick, description: "")]))
     }
 }

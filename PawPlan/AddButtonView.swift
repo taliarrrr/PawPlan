@@ -10,12 +10,13 @@ import SwiftUI
 
 struct AddButtonView: View {
     
-    //for when we make a list of events, for now uses days
     @Binding var events : [Event]
+    @Binding var event : Event
+    @Binding var day : Day
     
     var body: some View {
-        //button is there, just doesn't do the right thing or go to the correct spot in navigation link
-        NavigationLink(destination: EventDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [])]), event: Binding.constant(Event(title: "", type: "", description: "")), events: Binding.constant([Event(title: "String", type: "", description: "")]))) {
+        
+        NavigationLink(destination: EventDetail(event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: $events, day: $day, isInList: false)) {
             Image(systemName: "plus")
                 .foregroundColor(.black)
             
@@ -25,6 +26,6 @@ struct AddButtonView: View {
 struct AddButtonView_Previews: PreviewProvider {
     static var previews: some View {
         //will be events
-        AddButtonView(events: Binding.constant([Event(title: "", type: "", description: "")]))
+        AddButtonView(events: Binding.constant([Event(title: "", type: types.pick, description: "")]), event: Binding.constant(Event(title: "", type: types.pick, description: "")), day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: types.pick, description: "")], event: Event(title: "", type: types.pick, description: ""))))
     }
 }

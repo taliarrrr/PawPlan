@@ -8,14 +8,25 @@
 
 import Foundation
 
+enum types : String, CaseIterable, Identifiable{
+    case pick
+    case Walk
+    case Feed
+    case Appointment
+    case Medicines
+    case Wash
+    
+    var id: String {self.rawValue}
+}
+
 class Event: Identifiable{
     
     var title : String
-    var type : String
+    var type : types
     var description : String
     
 
-    init(title : String, type : String, description: String){
+    init(title : String, type : types, description: String){
         self.title = title
         self.type = type
         self.description = description
