@@ -15,6 +15,9 @@
 		51C9959625FA75C100E848C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C9959425FA75C100E848C9 /* LaunchScreen.storyboard */; };
 		51C995A125FA75C100E848C9 /* PawPlanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C995A025FA75C100E848C9 /* PawPlanTests.swift */; };
 		51C995AC25FA75C100E848C9 /* PawPlanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C995AB25FA75C100E848C9 /* PawPlanUITests.swift */; };
+		51D85F05262720ED00ED897D /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F04262720ED00ED897D /* MonthView.swift */; };
+		51D85F072627221300ED897D /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F062627221300ED897D /* Month.swift */; };
+		51D85F0D26287FC700ED897D /* MonthDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F0C26287FC700ED897D /* MonthDetail.swift */; };
 		AD1ABE6426023E0F0073AECD /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6326023E0F0073AECD /* DayView.swift */; };
 		AD1ABE6626023EB80073AECD /* DayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6526023EB80073AECD /* DayDetail.swift */; };
 		AD1ABE68260244830073AECD /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE67260244830073AECD /* Day.swift */; };
@@ -59,6 +62,9 @@
 		51C995A725FA75C100E848C9 /* PawPlanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawPlanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C995AB25FA75C100E848C9 /* PawPlanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawPlanUITests.swift; sourceTree = "<group>"; };
 		51C995AD25FA75C100E848C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51D85F04262720ED00ED897D /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		51D85F062627221300ED897D /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
+		51D85F0C26287FC700ED897D /* MonthDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDetail.swift; sourceTree = "<group>"; };
 		AD1ABE6326023E0F0073AECD /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		AD1ABE6526023EB80073AECD /* DayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetail.swift; sourceTree = "<group>"; };
 		AD1ABE67260244830073AECD /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -133,9 +139,15 @@
 				AD938E3F260B742000C39C22 /* Event.swift */,
 				E3B69150261C830E003F554F /* EventDetail.swift */,
 				E3B69152261C8882003F554F /* EventView.swift */,
+
+				51D85F04262720ED00ED897D /* MonthView.swift */,
+				51D85F062627221300ED897D /* Month.swift */,
+				51D85F0C26287FC700ED897D /* MonthDetail.swift */,
+
 				AD938E43261F433800C39C22 /* PetView.swift */,
 				AD938E45261F438B00C39C22 /* Pet.swift */,
 				AD938E47261F44EB00C39C22 /* InfoButtonView.swift */,
+
 			);
 			path = PawPlan;
 			sourceTree = "<group>";
@@ -305,11 +317,16 @@
 				E3B69151261C830E003F554F /* EventDetail.swift in Sources */,
 				AD938E48261F44EB00C39C22 /* InfoButtonView.swift in Sources */,
 				51C9958C25FA75C000E848C9 /* SceneDelegate.swift in Sources */,
+				51D85F0D26287FC700ED897D /* MonthDetail.swift in Sources */,
+				51D85F05262720ED00ED897D /* MonthView.swift in Sources */,
 				AD1ABE6426023E0F0073AECD /* DayView.swift in Sources */,
 				51C9958E25FA75C000E848C9 /* ContentView.swift in Sources */,
 				AD938E46261F438B00C39C22 /* Pet.swift in Sources */,
 				E3B69153261C8882003F554F /* EventView.swift in Sources */,
+				51D85F072627221300ED897D /* Month.swift in Sources */,
+
 				AD938E44261F433800C39C22 /* PetView.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
