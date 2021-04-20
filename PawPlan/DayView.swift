@@ -14,7 +14,8 @@ struct DayView: View {
     @Binding var days : [Day]
     @Binding var event : Event
     @Binding var events : [Event]
-    
+    @Environment(\.presentationMode) var presentation
+
     
     var body: some View {
         ZStack{

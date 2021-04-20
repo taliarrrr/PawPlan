@@ -11,6 +11,8 @@ import SwiftUI
 struct InfoButtonView: View {
     
     @Binding var pet : Pet
+    @Environment(\.presentationMode) var presentation
+
     
     var body: some View {
         
