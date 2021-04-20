@@ -34,12 +34,12 @@ struct DayDetail: View {
             
                 NavigationView{
                     List{
-                        ForEach(events.indices, id: \.self){
+                        ForEach(day.events.indices, id: \.self){
                             i in
-                            EventView(event: self.$events[i], events: self.$events, day: self.$day)
+                            EventView(event: self.$day.events[i], day: self.$day)
                         }
                     }.navigationBarTitle("Events")
-                        .navigationBarItems(trailing: AddButtonView(events: $events, event: $event, day: self.$day))
+                        .navigationBarItems(trailing: AddButtonView(event: $event, day: self.$day))
                 }
             
                

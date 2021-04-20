@@ -11,7 +11,6 @@ import SwiftUI
 struct EventView: View {
     
     @Binding var event : Event
-    @Binding var events : [Event]
     @Binding var day : Day
     @Environment(\.presentationMode) var presentation
     
@@ -19,14 +18,14 @@ struct EventView: View {
     var body: some View {
         HStack{
             
-            NavigationLink(destination: EventDetail(event: $event, events: $events, day: $day, isInList: true)){
+            NavigationLink(destination: EventDetail(event: $event, day: $day)){
                 VStack(alignment: .leading){
-                    Text(day.event.title)
+                    Text(event.title)
                         .font(.system(size: 30))
                         .foregroundColor(.black)
                         .minimumScaleFactor(0.0001)
                         .font(.subheadline)
-                    Text(day.event.description)
+                    Text(event.description)
                         .font(.system(size: 20))
                     
                     
@@ -41,6 +40,6 @@ struct EventView: View {
 
 struct EventView_Previews: PreviewProvider {
     static var previews: some View {
-        EventView(event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: Binding.constant([Event(title: "", type: types.pick, description: "")]), day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: types.Feed, description: "")], event: Event(title: "", type: types.pick, description: ""))))
+        EventView(event: Binding.constant(Event(title: "", type: types.pick, description: "")), day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: types.Feed, description: "")], event: Event(title: "", type: types.pick, description: ""))))
     }
 }
