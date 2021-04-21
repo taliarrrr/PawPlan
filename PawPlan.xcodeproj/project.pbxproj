@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5181204D2630E752006B7230 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5181204C2630E752006B7230 /* lobster-two.regular.ttf */; };
 		51C9958A25FA75C000E848C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958925FA75C000E848C9 /* AppDelegate.swift */; };
 		51C9958C25FA75C000E848C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958B25FA75C000E848C9 /* SceneDelegate.swift */; };
 		51C9958E25FA75C000E848C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958D25FA75C000E848C9 /* ContentView.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5181204C2630E752006B7230 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "lobster-two.regular.ttf"; path = "PawPlan/lobster-two.regular.ttf"; sourceTree = SOURCE_ROOT; };
 		51C9958625FA75C000E848C9 /* PawPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C9958925FA75C000E848C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C9958B25FA75C000E848C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		51C9958825FA75C000E848C9 /* PawPlan */ = {
 			isa = PBXGroup;
 			children = (
+				5181204C2630E752006B7230 /* lobster-two.regular.ttf */,
 				51C9958925FA75C000E848C9 /* AppDelegate.swift */,
 				51C9958B25FA75C000E848C9 /* SceneDelegate.swift */,
 				51C9958D25FA75C000E848C9 /* ContentView.swift */,
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51C9959625FA75C100E848C9 /* LaunchScreen.storyboard in Resources */,
+				5181204D2630E752006B7230 /* lobster-two.regular.ttf in Resources */,
 				51C9959325FA75C100E848C9 /* Preview Assets.xcassets in Resources */,
 				51C9959025FA75C100E848C9 /* Assets.xcassets in Resources */,
 			);

@@ -56,5 +56,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>lobster-two.regular.ttf</string>
+	</array>
 </dict>
 </plist>

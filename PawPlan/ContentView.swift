@@ -62,12 +62,11 @@ struct ContentView: View {
                     MonthView( months: self.$months,month: self.$months[i], day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: types.pick, description: "")],  event: Event(title: "", type: types.pick, description: ""))), days: Binding.constant([Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: types.pick, description: "")],  event: Event(title: "", type: types.pick, description: ""))]), event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: Binding.constant([Event(title: "", type: types.pick, description: "")]), jan: self.$jan, feb: self.$feb, march: self.$march, april: self.$april, may: self.$may, june: self.$june, july: self.$july, august: self.$august, sept: self.$sept, oct: self.$oct, nov: self.$nov, dec: self.$dec)
                 }.scaledToFit()
                 }.navigationBarItems(trailing:             InfoButtonView(pet: $pet)
-                ).navigationBarTitle("Months 2021")
+            ).navigationBarTitle("Months 2021")
             }
         }
         
     }
-
 
 
 
