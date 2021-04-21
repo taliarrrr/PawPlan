@@ -139,15 +139,12 @@
 				AD938E3F260B742000C39C22 /* Event.swift */,
 				E3B69150261C830E003F554F /* EventDetail.swift */,
 				E3B69152261C8882003F554F /* EventView.swift */,
-
 				51D85F04262720ED00ED897D /* MonthView.swift */,
 				51D85F062627221300ED897D /* Month.swift */,
 				51D85F0C26287FC700ED897D /* MonthDetail.swift */,
-
 				AD938E43261F433800C39C22 /* PetView.swift */,
 				AD938E45261F438B00C39C22 /* Pet.swift */,
 				AD938E47261F44EB00C39C22 /* InfoButtonView.swift */,
-
 			);
 			path = PawPlan;
 			sourceTree = "<group>";
@@ -324,9 +321,7 @@
 				AD938E46261F438B00C39C22 /* Pet.swift in Sources */,
 				E3B69153261C8882003F554F /* EventView.swift in Sources */,
 				51D85F072627221300ED897D /* Month.swift in Sources */,
-
 				AD938E44261F433800C39C22 /* PetView.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

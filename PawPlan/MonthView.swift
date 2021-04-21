@@ -31,16 +31,20 @@ struct MonthView: View {
     
     
     var body: some View {
+        ZStack{
+                   
+                   // Image("background").frame(width: 390, height: 100, alignment: .bottomLeading).cornerRadius(20).scaledToFill()
         HStack{
             NavigationLink(destination: MonthDetail(months: $months, month: $month, day: $day, days: $days, event: $event, events: $events, jan: $jan, feb: $feb, march: $march, april: $april, may: $may, june: $june, july: $july, august: $august, sept: $sept, oct: $oct , nov: $nov, dec: $dec)){
-                Text(month.month).font(.system(size: 30))
-                .foregroundColor(.orange)
+                Text(month.month).font(.system(size: 30)).font(.largeTitle)
+                    .foregroundColor(.purple).bold()
                 .minimumScaleFactor(0.0001)
-                .lineLimit(1)
+                    .lineLimit(1)
                 
             }
             
         }
+    }
     }
     
     struct MonthView_Previews: PreviewProvider {
@@ -50,3 +54,4 @@ struct MonthView: View {
         
     }
 }
+
