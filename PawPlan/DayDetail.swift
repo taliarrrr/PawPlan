@@ -24,10 +24,10 @@ struct DayDetail: View {
         VStack{
             
             Text("\(day.month) \(day.day1), \(day.year)")
-                .font(.system(size: 30))
-                .foregroundColor(.orange)
-            Text("\(day.dayOfWeek)")
-                .font(.system(size: 20))
+                .font(Font.custom("lobsterTwo", size: 25))
+                .foregroundColor(.purple)
+          //  Text("\(day.dayOfWeek)")
+             //   .font(.system(size: 20))
             
            
             

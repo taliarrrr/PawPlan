@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Foundation
+import UIKit
 
 struct DayView: View {
     
@@ -45,12 +46,11 @@ struct DayView: View {
                     VStack{
                         HStack{
                         
-                            Text("         " + day.month + " ").font(.system(size: 26))
+                            Text("         " + day.month + " ").font(Font.custom("lobsterTwo", size: 35))
                                 .foregroundColor(.purple)
-                                //.minimumScaleFactor(0.5)
                                 .lineLimit(2)
                             
-                            Text(String(day.day1)).font(.system(size: 26)).foregroundColor(.gray)
+                            Text(String(day.day1)).font(Font.custom("lobsterTwo", size: 35)).foregroundColor(.gray)
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
                             
