@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5181204D2630E752006B7230 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5181204C2630E752006B7230 /* lobster-two.regular.ttf */; };
+		5181204F2631B4FC006B7230 /* lobsterTwo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5181204E2631B4FC006B7230 /* lobsterTwo.ttf */; };
+		518120502631B4FC006B7230 /* lobsterTwo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5181204E2631B4FC006B7230 /* lobsterTwo.ttf */; };
+		518120512631B4FC006B7230 /* lobsterTwo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5181204E2631B4FC006B7230 /* lobsterTwo.ttf */; };
+		518120632631C13F006B7230 /* BradleyHandBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 518120622631C13F006B7230 /* BradleyHandBold.ttf */; };
+		518120662631C16F006B7230 /* BradleyHandBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 518120622631C13F006B7230 /* BradleyHandBold.ttf */; };
+		518120672631C170006B7230 /* BradleyHandBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 518120622631C13F006B7230 /* BradleyHandBold.ttf */; };
 		51C9958A25FA75C000E848C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958925FA75C000E848C9 /* AppDelegate.swift */; };
 		51C9958C25FA75C000E848C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958B25FA75C000E848C9 /* SceneDelegate.swift */; };
 		51C9958E25FA75C000E848C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958D25FA75C000E848C9 /* ContentView.swift */; };
@@ -49,7 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5181204C2630E752006B7230 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "lobster-two.regular.ttf"; path = "PawPlan/lobster-two.regular.ttf"; sourceTree = SOURCE_ROOT; };
+		5181204E2631B4FC006B7230 /* lobsterTwo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lobsterTwo.ttf; sourceTree = "<group>"; };
+		518120622631C13F006B7230 /* BradleyHandBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BradleyHandBold.ttf; sourceTree = "<group>"; };
 		51C9958625FA75C000E848C9 /* PawPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C9958925FA75C000E848C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C9958B25FA75C000E848C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +133,8 @@
 		51C9958825FA75C000E848C9 /* PawPlan */ = {
 			isa = PBXGroup;
 			children = (
-				5181204C2630E752006B7230 /* lobster-two.regular.ttf */,
+				518120622631C13F006B7230 /* BradleyHandBold.ttf */,
+				5181204E2631B4FC006B7230 /* lobsterTwo.ttf */,
 				51C9958925FA75C000E848C9 /* AppDelegate.swift */,
 				51C9958B25FA75C000E848C9 /* SceneDelegate.swift */,
 				51C9958D25FA75C000E848C9 /* ContentView.swift */,
@@ -282,8 +289,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518120632631C13F006B7230 /* BradleyHandBold.ttf in Resources */,
 				51C9959625FA75C100E848C9 /* LaunchScreen.storyboard in Resources */,
-				5181204D2630E752006B7230 /* lobster-two.regular.ttf in Resources */,
+				5181204F2631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
 				51C9959325FA75C100E848C9 /* Preview Assets.xcassets in Resources */,
 				51C9959025FA75C100E848C9 /* Assets.xcassets in Resources */,
 			);
@@ -293,6 +301,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518120502631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
+				518120672631C170006B7230 /* BradleyHandBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +310,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				518120512631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
+				518120662631C16F006B7230 /* BradleyHandBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

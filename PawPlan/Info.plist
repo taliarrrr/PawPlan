@@ -58,7 +58,8 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
-		<string>lobster-two.regular.ttf</string>
+		<string>BradleyHandBold.ttf</string>
+		<string>lobsterTwo.ttf</string>
 	</array>
 </dict>
 </plist>

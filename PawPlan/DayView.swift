@@ -46,11 +46,11 @@ struct DayView: View {
                         HStack{
                         
                             Text("         " + day.month + " ").font(.system(size: 26))
-                                .foregroundColor(.orange)
+                                .foregroundColor(.purple)
                                 //.minimumScaleFactor(0.5)
                                 .lineLimit(2)
                             
-                            Text(String(day.day1)).font(.system(size: 26))
+                            Text(String(day.day1)).font(.system(size: 26)).foregroundColor(.gray)
                                 .minimumScaleFactor(0.0001)
                                 .lineLimit(1)
                             

@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct MonthView: View {
     @Binding var months : [Month]
     @Binding var month : Month
@@ -36,8 +37,8 @@ struct MonthView: View {
                    // Image("background").frame(width: 390, height: 100, alignment: .bottomLeading).cornerRadius(20).scaledToFill()
         HStack{
             NavigationLink(destination: MonthDetail(months: $months, month: $month, day: $day, days: $days, event: $event, events: $events, jan: $jan, feb: $feb, march: $march, april: $april, may: $may, june: $june, july: $july, august: $august, sept: $sept, oct: $oct , nov: $nov, dec: $dec)){
-                Text(month.month).font(Font.custom("lobster-two.regular", size: 33))
-                    .foregroundColor(.purple).bold()
+                Text(month.month).font(Font.custom("BradleyHandBold", size: 45))
+                    .foregroundColor(.purple)
                 .minimumScaleFactor(0.0001)
                     .lineLimit(1)
                 
