@@ -46,12 +46,11 @@ struct DayView: View {
                     VStack{
                         HStack{
                         
-                            Text("         " + day.month + " ").font(Font.custom("lobsterTwo", size: 35))
+                            Text("         " + day.month + " ").font(Font.custom("Meadow", size: 50))
                                 .foregroundColor(.purple)
                                 .lineLimit(2)
                             
-                            Text(String(day.day1)).font(Font.custom("lobsterTwo", size: 35)).foregroundColor(.gray)
-                                .minimumScaleFactor(0.0001)
+                            Text(String(day.day1)).font(Font.custom("Meadow", size: 40)).foregroundColor(.gray)
                                 .lineLimit(1)
                             
                           //  Text(day.year + "   ").font(.system(size: 30))

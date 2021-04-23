@@ -21,6 +21,12 @@
 		51D85F05262720ED00ED897D /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F04262720ED00ED897D /* MonthView.swift */; };
 		51D85F072627221300ED897D /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F062627221300ED897D /* Month.swift */; };
 		51D85F0D26287FC700ED897D /* MonthDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F0C26287FC700ED897D /* MonthDetail.swift */; };
+		51DCAAFB2633258100967C3E /* Meadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51DCAAFA2633258100967C3E /* Meadow.otf */; };
+		51DCAAFC2633258100967C3E /* Meadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51DCAAFA2633258100967C3E /* Meadow.otf */; };
+		51DCAAFD2633258100967C3E /* Meadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51DCAAFA2633258100967C3E /* Meadow.otf */; };
+		51DCAAFF26332FB700967C3E /* title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DCAAFE26332FB700967C3E /* title.swift */; };
+		51DCAB0026332FB700967C3E /* title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DCAAFE26332FB700967C3E /* title.swift */; };
+		51DCAB0126332FB700967C3E /* title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DCAAFE26332FB700967C3E /* title.swift */; };
 		AD1ABE6426023E0F0073AECD /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6326023E0F0073AECD /* DayView.swift */; };
 		AD1ABE6626023EB80073AECD /* DayDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE6526023EB80073AECD /* DayDetail.swift */; };
 		AD1ABE68260244830073AECD /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABE67260244830073AECD /* Day.swift */; };
@@ -69,6 +75,8 @@
 		51D85F04262720ED00ED897D /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		51D85F062627221300ED897D /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		51D85F0C26287FC700ED897D /* MonthDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDetail.swift; sourceTree = "<group>"; };
+		51DCAAFA2633258100967C3E /* Meadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Meadow.otf; sourceTree = "<group>"; };
+		51DCAAFE26332FB700967C3E /* title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = title.swift; sourceTree = "<group>"; };
 		AD1ABE6326023E0F0073AECD /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		AD1ABE6526023EB80073AECD /* DayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetail.swift; sourceTree = "<group>"; };
 		AD1ABE67260244830073AECD /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -129,6 +137,7 @@
 		51C9958825FA75C000E848C9 /* PawPlan */ = {
 			isa = PBXGroup;
 			children = (
+				51DCAAFA2633258100967C3E /* Meadow.otf */,
 				5181204E2631B4FC006B7230 /* lobsterTwo.ttf */,
 				51C9958925FA75C000E848C9 /* AppDelegate.swift */,
 				51C9958B25FA75C000E848C9 /* SceneDelegate.swift */,
@@ -150,6 +159,7 @@
 				AD938E43261F433800C39C22 /* PetView.swift */,
 				AD938E45261F438B00C39C22 /* Pet.swift */,
 				AD938E47261F44EB00C39C22 /* InfoButtonView.swift */,
+				51DCAAFE26332FB700967C3E /* title.swift */,
 			);
 			path = PawPlan;
 			sourceTree = "<group>";
@@ -284,6 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DCAAFB2633258100967C3E /* Meadow.otf in Resources */,
 				51C9959625FA75C100E848C9 /* LaunchScreen.storyboard in Resources */,
 				5181204F2631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
 				51C9959325FA75C100E848C9 /* Preview Assets.xcassets in Resources */,
@@ -295,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DCAAFC2633258100967C3E /* Meadow.otf in Resources */,
 				518120502631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DCAAFD2633258100967C3E /* Meadow.otf in Resources */,
 				518120512631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +335,7 @@
 				E3B69151261C830E003F554F /* EventDetail.swift in Sources */,
 				AD938E48261F44EB00C39C22 /* InfoButtonView.swift in Sources */,
 				51C9958C25FA75C000E848C9 /* SceneDelegate.swift in Sources */,
+				51DCAAFF26332FB700967C3E /* title.swift in Sources */,
 				51D85F0D26287FC700ED897D /* MonthDetail.swift in Sources */,
 				51D85F05262720ED00ED897D /* MonthView.swift in Sources */,
 				AD1ABE6426023E0F0073AECD /* DayView.swift in Sources */,
@@ -337,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DCAB0026332FB700967C3E /* title.swift in Sources */,
 				51C995A125FA75C100E848C9 /* PawPlanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DCAB0126332FB700967C3E /* title.swift in Sources */,
 				51C995AC25FA75C100E848C9 /* PawPlanUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

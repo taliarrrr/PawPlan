@@ -17,10 +17,13 @@ struct InfoButtonView: View {
     var body: some View {
         
         NavigationLink(destination: PetView(pet: $pet)) {
-                  Text("Info")
-                       .foregroundColor(.black)
+            ZStack{
+                Ellipse().frame(width: 40, height: 30, alignment: .leading).foregroundColor(.purple)
+            Text("Info")
+                .foregroundColor(.black).bold().font(Font.custom("Meadow", size: 20))
                    
                }
+        }
            }
 }
 

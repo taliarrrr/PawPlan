@@ -24,7 +24,7 @@ struct DayDetail: View {
         VStack{
             
             Text("\(day.month) \(day.day1), \(day.year)")
-                .font(Font.custom("lobsterTwo", size: 25))
+                .font(Font.custom("Meadow", size: 40))
                 .foregroundColor(.purple)
           //  Text("\(day.dayOfWeek)")
              //   .font(.system(size: 20))
@@ -38,7 +38,7 @@ struct DayDetail: View {
                             i in
                             EventView(event: self.$day.events[i], day: self.$day)
                         }
-                    }.navigationBarTitle("Events")
+                    }//.navigationBarTitle("Events")
                         .navigationBarItems(trailing: AddButtonView(event: $event, day: self.$day))
                 }
             
