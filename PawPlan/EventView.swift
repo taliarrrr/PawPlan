@@ -21,12 +21,12 @@ struct EventView: View {
             NavigationLink(destination: EventDetail(event: $event, day: $day)){
                 VStack(alignment: .leading){
                     Text(event.title)
-                        .font(.system(size: 30))
-                        .foregroundColor(.black)
+                        .font(Font.custom("teen", size: 30))
+                         .foregroundColor(Color("darkPurple"))
                         .minimumScaleFactor(0.0001)
                         .font(.subheadline)
                     Text(event.description)
-                        .font(.system(size: 20))
+                        .font(Font.custom("teen", size: 20))
                     
                     
                     

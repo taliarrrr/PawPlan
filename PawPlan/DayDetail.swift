@@ -24,8 +24,8 @@ struct DayDetail: View {
         VStack{
             
             Text("\(day.month) \(day.day1), \(day.year)")
-                .font(Font.custom("Meadow", size: 40))
-                .foregroundColor(.purple)
+                .font(Font.custom("teen", size: 40))
+              .foregroundColor(Color("darkPurple"))
           //  Text("\(day.dayOfWeek)")
              //   .font(.system(size: 20))
             

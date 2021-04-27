@@ -40,17 +40,17 @@ struct DayView: View {
     var body: some View {
         ZStack{
             
-            // Image("background").frame(width: 390, height: 100, alignment: .bottomLeading).cornerRadius(20).scaledToFill()
+             Image("background").frame(width: 390, height: 55, alignment: .bottomLeading).cornerRadius(20).scaledToFill()
             HStack{
                 NavigationLink(destination: DayDetail(day: $day, days: $days, event: $event, events: $events)){
                     VStack{
                         HStack{
                         
-                            Text("         " + day.month + " ").font(Font.custom("Meadow", size: 50))
-                                .foregroundColor(.purple)
+                            Text("         " + day.month + " ").font(Font.custom("teen", size: 20))
+                                .foregroundColor(Color("darkPurple"))
                                 .lineLimit(2)
                             
-                            Text(String(day.day1)).font(Font.custom("Meadow", size: 40)).foregroundColor(.gray)
+                            Text(String(day.day1)).font(Font.custom("teen", size: 20)) .foregroundColor(.black)
                                 .lineLimit(1)
                             
                           //  Text(day.year + "   ").font(.system(size: 30))

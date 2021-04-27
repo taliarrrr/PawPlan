@@ -13,7 +13,7 @@ struct title: View {
         ZStack{
                        //Rectangle().frame(width: 90, height: 40, alignment: .leading).foregroundColor(.purple)
                    Text("My Calendar")
-                    .foregroundColor(.blue).bold().font(Font.custom("Meadow", size: 30))
+                  .foregroundColor(Color("pink")).bold().font(Font.custom("teen", size: 30))
         }
     }
 }

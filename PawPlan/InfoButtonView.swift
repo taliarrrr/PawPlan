@@ -18,9 +18,9 @@ struct InfoButtonView: View {
         
         NavigationLink(destination: PetView(pet: $pet)) {
             ZStack{
-                Ellipse().frame(width: 40, height: 30, alignment: .leading).foregroundColor(.purple)
+                Ellipse().frame(width: 40, height: 30, alignment: .leading).foregroundColor(.white)
             Text("Info")
-                .foregroundColor(.black).bold().font(Font.custom("Meadow", size: 20))
+                .foregroundColor(.black).bold().font(Font.custom("teen", size: 20))
                    
                }
         }
