@@ -10,9 +10,6 @@
 		517A841F26383AE6005693FF /* teen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 517A841E26383AE6005693FF /* teen.ttf */; };
 		517A842026383AE6005693FF /* teen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 517A841E26383AE6005693FF /* teen.ttf */; };
 		517A842126383AE6005693FF /* teen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 517A841E26383AE6005693FF /* teen.ttf */; };
-		5181204F2631B4FC006B7230 /* lobsterTwo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5181204E2631B4FC006B7230 /* lobsterTwo.ttf */; };
-		518120502631B4FC006B7230 /* lobsterTwo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5181204E2631B4FC006B7230 /* lobsterTwo.ttf */; };
-		518120512631B4FC006B7230 /* lobsterTwo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5181204E2631B4FC006B7230 /* lobsterTwo.ttf */; };
 		51C9958A25FA75C000E848C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958925FA75C000E848C9 /* AppDelegate.swift */; };
 		51C9958C25FA75C000E848C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958B25FA75C000E848C9 /* SceneDelegate.swift */; };
 		51C9958E25FA75C000E848C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C9958D25FA75C000E848C9 /* ContentView.swift */; };
@@ -24,9 +21,6 @@
 		51D85F05262720ED00ED897D /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F04262720ED00ED897D /* MonthView.swift */; };
 		51D85F072627221300ED897D /* Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F062627221300ED897D /* Month.swift */; };
 		51D85F0D26287FC700ED897D /* MonthDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D85F0C26287FC700ED897D /* MonthDetail.swift */; };
-		51DCAAFB2633258100967C3E /* Meadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51DCAAFA2633258100967C3E /* Meadow.otf */; };
-		51DCAAFC2633258100967C3E /* Meadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51DCAAFA2633258100967C3E /* Meadow.otf */; };
-		51DCAAFD2633258100967C3E /* Meadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51DCAAFA2633258100967C3E /* Meadow.otf */; };
 		51DCAAFF26332FB700967C3E /* title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DCAAFE26332FB700967C3E /* title.swift */; };
 		51DCAB0026332FB700967C3E /* title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DCAAFE26332FB700967C3E /* title.swift */; };
 		51DCAB0126332FB700967C3E /* title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51DCAAFE26332FB700967C3E /* title.swift */; };
@@ -61,7 +55,6 @@
 
 /* Begin PBXFileReference section */
 		517A841E26383AE6005693FF /* teen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = teen.ttf; sourceTree = "<group>"; };
-		5181204E2631B4FC006B7230 /* lobsterTwo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lobsterTwo.ttf; sourceTree = "<group>"; };
 		51C9958625FA75C000E848C9 /* PawPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C9958925FA75C000E848C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51C9958B25FA75C000E848C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +72,6 @@
 		51D85F04262720ED00ED897D /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		51D85F062627221300ED897D /* Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Month.swift; sourceTree = "<group>"; };
 		51D85F0C26287FC700ED897D /* MonthDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDetail.swift; sourceTree = "<group>"; };
-		51DCAAFA2633258100967C3E /* Meadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Meadow.otf; sourceTree = "<group>"; };
 		51DCAAFE26332FB700967C3E /* title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = title.swift; sourceTree = "<group>"; };
 		AD1ABE6326023E0F0073AECD /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
 		AD1ABE6526023EB80073AECD /* DayDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetail.swift; sourceTree = "<group>"; };
@@ -142,8 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				517A841E26383AE6005693FF /* teen.ttf */,
-				51DCAAFA2633258100967C3E /* Meadow.otf */,
-				5181204E2631B4FC006B7230 /* lobsterTwo.ttf */,
 				51C9958925FA75C000E848C9 /* AppDelegate.swift */,
 				51C9958B25FA75C000E848C9 /* SceneDelegate.swift */,
 				51C9958D25FA75C000E848C9 /* ContentView.swift */,
@@ -299,10 +289,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51DCAAFB2633258100967C3E /* Meadow.otf in Resources */,
 				51C9959625FA75C100E848C9 /* LaunchScreen.storyboard in Resources */,
 				517A841F26383AE6005693FF /* teen.ttf in Resources */,
-				5181204F2631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
 				51C9959325FA75C100E848C9 /* Preview Assets.xcassets in Resources */,
 				51C9959025FA75C100E848C9 /* Assets.xcassets in Resources */,
 			);
@@ -312,8 +300,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51DCAAFC2633258100967C3E /* Meadow.otf in Resources */,
-				518120502631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
 				517A842026383AE6005693FF /* teen.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,8 +308,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51DCAAFD2633258100967C3E /* Meadow.otf in Resources */,
-				518120512631B4FC006B7230 /* lobsterTwo.ttf in Resources */,
 				517A842126383AE6005693FF /* teen.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

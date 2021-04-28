@@ -20,11 +20,11 @@ struct PetView: View {
                 TextField("Name", text: $pet.name)
                     .font(Font.custom("teen", size: 30))
                     .foregroundColor(.orange)
-                TextField("Type", text: $pet.dogOrCat)
+                TextField("Breed", text: $pet.dogOrCat)
                     .font(.system(size: 20))
                 
                 Section(){
-                    Picker("meow or woof", selection: $pet.type ) {
+                    Picker("Type of Pet", selection: $pet.type ) {
                         Text("").tag(typesOfPets.pick)
                         Text("Dog").tag(typesOfPets.dog)
                         Text("Cat").tag(typesOfPets.cat)
