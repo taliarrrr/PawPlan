@@ -10,14 +10,15 @@ import SwiftUI
 
 struct AddButtonView: View {
     
-    @Binding var event : Event
+//    @Binding var event : Event
+//    @Binding var events: [Event]
     @Binding var day : Day
     @Environment(\.presentationMode) var presentation
-
+   
     
     var body: some View {
         
-        NavigationLink(destination: EventDetail(event: Binding.constant(Event(title: "", type: types.pick, description: "")), day: $day, isInList: false)) {
+        NavigationLink(destination: AddEvents(day: $day)) {
             Image(systemName: "plus")
                 .foregroundColor(.black)
             
@@ -26,6 +27,6 @@ struct AddButtonView: View {
 }
 struct AddButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        AddButtonView(event: Binding.constant(Event(title: "", type: types.pick, description: "")), day: Binding.constant(Day(year: "", month: "", day1: "", dayOfWeek: "", events: [Event(title: "", type: types.pick, description: "")], event: Event(title: "", type: types.pick, description: ""))))
+        AddButtonView(day: Binding.constant(Day(year: "", month: Months.January, day1: "", dayOfWeek: "", events: [Event](), event: Event(title: "", type: types.pick, description: ""))))
     }
 }

@@ -9,49 +9,32 @@
 import SwiftUI
 
 struct DayDetail: View {
-    
-    
+
+
     @Binding var day : Day
-    @Binding var days : [Day]
-    @Binding var event : Event
-    @Binding var events : [Event]
+
     @Environment(\.presentationMode) var presentation
     
-    //change to something you want to choose from
-    var types : [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+   
     
     var body: some View {
         VStack{
             
-            Text("\(day.month) \(day.day1), \(day.year)")
-                .font(Font.custom("teen", size: 40))
-              .foregroundColor(Color("darkPurple"))
-          //  Text("\(day.dayOfWeek)")
-             //   .font(.system(size: 20))
-            
-           
-            
-            
-                NavigationView{
+            Text("\(day.month)" + " \(day.day1)," + "\(day.year)").font(Font.custom("teen", size: 40)).foregroundColor(Color("darkPurple"))
+        
+            NavigationView{
                     List{
                         ForEach(day.events.indices, id: \.self){
                             i in
-                            EventView(event: self.$day.events[i], day: self.$day)
+                            EventView(day: self.$day)
                         }
-                    }//.navigationBarTitle("Events")
-                        .navigationBarItems(trailing: AddButtonView(event: $event, day: self.$day))
+                    }.navigationBarItems(trailing: AddButtonView(day: $day))
                 }
-            
-               
-            
-            
-            //can't do it yet, need events class
-            //doesn't do correct thing
         }
     }
 }
 struct ContactDetail_Previews: PreviewProvider {
     static var previews: some View {
-        DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [], event: Event(title: "", type: types.pick, description: ""))), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [], event: Event(title: "", type: types.pick, description: ""))]), event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: Binding.constant([Event(title: "", type: types.pick, description: "")]))
+        DayDetail(day: Binding.constant(Day(year: "", month: Months.January, day1: "", dayOfWeek: "", events: [Event](), event: Event(title: "", type: types.pick, description: ""))))
     }
 }

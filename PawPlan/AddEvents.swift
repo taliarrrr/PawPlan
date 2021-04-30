@@ -1,0 +1,106 @@
+//
+//  AddEvents.swift
+//  PawPlan
+//
+//  Created by Macy Donahoe (student LM) on 4/29/21.
+//  Copyright © 2021 Macy Donahoe (student LM). All rights reserved.
+//
+
+import SwiftUI
+
+struct AddEvents: View {
+    
+    @State var newEvent: Event = Event(title: "", type: types.pick, description: "")
+    @Binding var day : Day
+    
+    @Environment(\.presentationMode) var presentation
+    
+    var body: some View {
+        
+        VStack{
+            Form{
+                Section() {
+                    TextField("Title", text: $newEvent.title)
+                        .font(.system(size: 30))
+                        .foregroundColor(.black)
+                    TextField("Description", text: $newEvent.description)
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                }
+                
+                Section(){
+                    Picker("Type", selection: $newEvent.type ) {
+                        Text(" ").tag(types.pick)
+                        Text("Walk").tag(types.Walk)
+                        Text("Feed").tag(types.Feed)
+                        Text("Appointment").tag(types.Appointment)
+                        Text("Medicines").tag(types.Medicines)
+                        Text("Wash").tag(types.Wash)
+                    }
+                    
+                }
+                
+                
+                
+            }
+            
+            Button(action: {
+                self.day.events.append(self.newEvent)
+                self.day.events.sort(by: {$0.title < $1.title})
+                print("save")
+                self.presentation.wrappedValue.dismiss() }) {
+                    
+                Text("Save")
+                    
+            }
+            Button("Send Notification") {
+                               // 1.
+                               UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound])
+                               {
+                                   success, error in
+                               }
+                               
+                               // 2.
+                               let content = UNMutableNotificationContent()
+                               content.title = "Notification Tutorial"
+                               content.subtitle = "from ioscreator.com"
+                               content.body = " Notification triggered"
+                               content.sound = UNNotificationSound.default
+                               
+                               
+                               // 3.
+                               
+                               guard let imageURL = Bundle.main.url(forResource: "Paw", withExtension: "png")
+                                   else{return}
+                               
+                               
+                               
+                               let attachment = try! UNNotificationAttachment(identifier: "Paw", url: imageURL, options: .none)
+                               
+                               content.attachments = [attachment]
+                               
+                               // 4.
+                               
+                               let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+                               
+                               let request = UNNotificationRequest(identifier: "notification.id.01", content: content, trigger: trigger)
+                               
+                               
+                               // 5.
+                               
+                               UNUserNotificationCenter.current().add(request)
+                               
+                           }
+                           
+            
+        }//.onAppear(perform:  self.day.events.append(self.newEvent))
+    }
+    
+}
+
+
+struct AddEvents_Previews: PreviewProvider {
+    static var previews: some View {
+        AddEvents(day: Binding.constant(Day(year: "", month: Months.January, day1: "", dayOfWeek: "", events: [Event](), event: Event(title: "", type: types.pick, description: ""))))
+    }
+}

@@ -10,11 +10,15 @@ import Foundation
 class Month: Identifiable{
     
     var id = UUID()
-    var month : String
-    
+    var monthName : String
+    var month : Months
+    var daysInMonth : [Day]
 
-    init(month : String){
+    init(monthName: String, month : Months, daysInMonth : [Day]){
+        self.monthName = monthName
         self.month = month
-      
+        self.daysInMonth = daysInMonth
     }
 }
+
+
