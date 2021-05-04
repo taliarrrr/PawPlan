@@ -25,12 +25,12 @@ struct EventView: View {
                     ForEach(day.events.indices, id:\.self){
                         i in
                         Group{
-                            Text(self.day.events[i].title)
+                            Text(self.event.title)
                                 .font(Font.custom("teen", size: 25))
                                 .foregroundColor(Color("darkPurple"))
                                 .minimumScaleFactor(0.0001)
                                 .font(.subheadline)
-                            Text(self.day.events[i].description)
+                            Text(self.event.description)
                                 .font(Font.custom("teen", size: 20))
                             
                         }.background(Color.white.opacity(0.7))
