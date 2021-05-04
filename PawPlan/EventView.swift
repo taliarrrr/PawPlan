@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EventView: View {
     
-    //@Binding var event : Event
+    
     @Binding var day : Day
     @Binding var event: Event
     @Environment(\.presentationMode) var presentation
