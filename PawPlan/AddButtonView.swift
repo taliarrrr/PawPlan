@@ -10,15 +10,15 @@ import SwiftUI
 
 struct AddButtonView: View {
     
-//    @Binding var event : Event
-//    @Binding var events: [Event]
+
     @Binding var day : Day
+   @State var newEvent: Event = Event(title: "", type: types.pick, description: "")
     @Environment(\.presentationMode) var presentation
    
     
     var body: some View {
         
-        NavigationLink(destination: AddEvents(day: $day)) {
+        NavigationLink(destination: EventDetail(day: $day, event: self.$newEvent)) {
             Image(systemName: "plus")
                 .foregroundColor(.black)
             

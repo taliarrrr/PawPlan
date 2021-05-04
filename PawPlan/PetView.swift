@@ -19,7 +19,7 @@ struct PetView: View {
             Section() {
                 TextField("Name", text: $pet.name)
                     .font(Font.custom("teen", size: 30))
-                    .foregroundColor(.orange)
+                    .foregroundColor(Color("darkPurple"))
                 TextField("Breed", text: $pet.dogOrCat)
                     .font(.system(size: 20))
                 

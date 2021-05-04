@@ -12,6 +12,8 @@ struct MonthDetail: View {
     
     @Binding var days : [Day]
     var m: Month
+    @Binding var event: Event
+    
     
     var body: some View {
         NavigationView{
@@ -22,7 +24,7 @@ struct MonthDetail: View {
                     Group{
                         if self.days[i].month == self.m.month {
                            
-                            DayView(day: self.$days[i])
+                            DayView(day: self.$days[i], event: self.$event)
                         }
                     }
                 }
@@ -35,7 +37,7 @@ struct MonthDetail: View {
     
     struct MonthDetail_Previews: PreviewProvider {
         static var previews: some View {
-            MonthDetail(days: Binding.constant([Day]()), m: Month(monthName: "January", month: Months.January, daysInMonth: MonthList.jan) )
+            MonthDetail(days: Binding.constant([Day]()), m: Month(monthName: "January", month: Months.January, daysInMonth: MonthList.jan), event: Binding.constant(Event(title: "", type: types.pick, description: "")) )
         }
     }
 }

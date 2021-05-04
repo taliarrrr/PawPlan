@@ -13,6 +13,7 @@ import UIKit
 struct DayView: View {
 
     @Binding var day : Day
+   @Binding var event: Event
     @Environment(\.presentationMode) var presentation
     
     var body: some View {
@@ -20,7 +21,7 @@ struct DayView: View {
             
              Image("background").frame(width: 390, height: 55, alignment: .bottomLeading).cornerRadius(10).scaledToFill()
             HStack{
-                NavigationLink(destination: DayDetail(day: $day)){
+                NavigationLink(destination: DayDetail(day: $day, event: $event)){
                     VStack{
                         HStack (alignment: .center){
                         
@@ -43,7 +44,7 @@ struct DayView: View {
 
 struct Day_Previews: PreviewProvider {
     static var previews: some View {
-        DayView(day: Binding.constant(Day(year: "", month: Months.January, day1: "", dayOfWeek: "", events: [Event](), event: Event(title: "", type: types.pick, description: ""))))
+        DayView(day: Binding.constant(Day(year: "", month: Months.January, day1: "", dayOfWeek: "", events: [Event](), event: Event(title: "", type: types.pick, description: ""))), event: Binding.constant(Event(title: "", type: types.pick, description: "")))
     }
 
 }

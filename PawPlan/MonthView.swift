@@ -14,6 +14,7 @@ struct MonthView: View {
 
     @Binding var days : [Day]
     var m: Month
+    @Binding var event: Event
     
     var body: some View {
         ZStack{
@@ -21,7 +22,7 @@ struct MonthView: View {
                 Image("background").frame(width: 990, height: 55, alignment: .bottomLeading).cornerRadius(10).scaledToFill()
             
             HStack{
-                NavigationLink(destination: MonthDetail(days: $days, m: m)){
+                NavigationLink(destination: MonthDetail(days: $days, m: m, event: $event)){
                     Text(m.monthName).font(Font.custom("teen", size: 50))
                         .foregroundColor(Color("darkPurple"))
                         .minimumScaleFactor(0.0001)
@@ -35,7 +36,7 @@ struct MonthView: View {
     
     struct MonthView_Previews: PreviewProvider {
         static var previews: some View {
-            MonthView(days: Binding.constant([Day]()), m: Month(monthName: "January", month: Months.January, daysInMonth: [Day]()) )
+            MonthView(days: Binding.constant([Day]()), m: Month(monthName: "January", month: Months.January, daysInMonth: [Day]()), event: Binding.constant(Event(title: "", type: types.pick, description: "")) )
         }
         
     }

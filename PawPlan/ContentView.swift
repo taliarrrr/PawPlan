@@ -26,7 +26,7 @@ struct ContentView: View {
     
 //    @State var events : [Event] = [Event(title: "", type: types.pick, description: "")]
     
-    var event : Event = Event(title: "", type: types.pick, description: "")
+    @State var event : Event = Event(title: "", type: types.pick, description: "")
     
     @State var pet : Pet = Pet(name: "", dogOrCat: "", type: typesOfPets.dog)
     
@@ -56,11 +56,11 @@ struct ContentView: View {
                 List{
                    ForEach(months.indices, id: \.self){
                         i in
-                    MonthView(days: self.$days, m: self.months[i])
+                    MonthView(days: self.$days, m: self.months[i], event: self.$event)
                     }
                 
-                }
-        }.navigationBarItems(trailing: InfoButtonView(pet: $pet))
+                }.navigationBarItems(trailing: InfoButtonView(pet: $pet))
+        }
     }
         }
         
