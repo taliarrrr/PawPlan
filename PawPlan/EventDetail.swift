@@ -57,7 +57,6 @@ struct EventDetail: View {
                     Button(action: {
                         self.day.events.append(self.event)
                         self.day.events.sort(by: {$0.title < $1.title})
-                        print("save")
                         self.presentation.wrappedValue.dismiss() }) {
                             
                         Text("Save")

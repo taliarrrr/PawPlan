@@ -19,7 +19,7 @@ struct MonthView: View {
     var body: some View {
         ZStack{
             
-                Image("background").frame(width: 990, height: 55, alignment: .bottomLeading).cornerRadius(10).scaledToFill()
+                Image("background").frame(width: 1100, height: 55, alignment: .bottomLeading).cornerRadius(10)
             
             HStack{
                 NavigationLink(destination: MonthDetail(days: $days, m: m, event: $event)){
