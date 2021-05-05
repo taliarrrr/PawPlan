@@ -14,11 +14,11 @@ struct DayDetail: View {
     @Binding var day : Day
     @Binding var days : [Day]
     @Binding var event : Event
-    @Binding var events : [Event]
     @Environment(\.presentationMode) var presentation
     
+    
     //change to something you want to choose from
-    var types : [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    //    var types : [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     
     var body: some View {
         VStack{
@@ -29,29 +29,38 @@ struct DayDetail: View {
             Text("\(day.dayOfWeek)")
                 .font(.system(size: 20))
             
-           
             
-            
-                NavigationView{
-                    List{
-                        ForEach(day.events.indices, id: \.self){
-                            i in
-                            EventView(event: self.$day.events[i], day: self.$day)
-                        }
-                    }.navigationBarTitle("Events")
-                        .navigationBarItems(trailing: AddButtonView(event: $event, day: self.$day))
+            NavigationView{
+                List{
+                    ForEach(day.events.indices, id: \.self){
+                        i in
+                        EventView(event: self.$day.events[i], day: self.$day)
+                    }.onDelete(perform: self.delete)
+                    
+                    
                 }
+                
+            }.navigationBarTitle("Events")
+                .navigationBarItems(trailing: AddButtonView(event: $event, day: self.$day))
             
-               
-            
-            
-            //can't do it yet, need events class
-            //doesn't do correct thing
         }
+        
     }
+    func delete(at indexSet: IndexSet) {
+        day.events.append(Event(title: "", type: types.pick, description: ""))
+        day.events.remove(atOffsets: indexSet)
+            self.presentation.wrappedValue.dismiss()
+        
+    }
+    
 }
+
+
+
+
 struct ContactDetail_Previews: PreviewProvider {
     static var previews: some View {
-        DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [], event: Event(title: "", type: types.pick, description: ""))), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [], event: Event(title: "", type: types.pick, description: ""))]), event: Binding.constant(Event(title: "", type: types.pick, description: "")), events: Binding.constant([Event(title: "", type: types.pick, description: "")]))
+        DayDetail(day: Binding.constant(Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [], event: Event(title: "", type: types.pick, description: ""))), days: Binding.constant([Day(year: "2021", month: "March", day1: "1", dayOfWeek: "Monday", events: [], event: Event(title: "", type: types.pick, description: ""))]), event: Binding.constant(Event(title: "", type: types.pick, description: "")))
     }
 }
+

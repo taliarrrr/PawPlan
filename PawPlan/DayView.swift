@@ -41,7 +41,7 @@ struct DayView: View {
             
             // Image("background").frame(width: 390, height: 100, alignment: .bottomLeading).cornerRadius(20).scaledToFill()
             HStack{
-                NavigationLink(destination: DayDetail(day: $day, days: $days, event: $event, events: $events)){
+                NavigationLink(destination: DayDetail(day: $day, days: $days, event: $event)){
                     VStack{
                         HStack{
                         
