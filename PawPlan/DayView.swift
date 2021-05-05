@@ -13,7 +13,7 @@ import UIKit
 struct DayView: View {
 
     @Binding var day : Day
-   // @Binding var event: Event
+
     @Environment(\.presentationMode) var presentation
     
     var body: some View {

@@ -16,23 +16,12 @@ struct ContentView: View {
     
 
     @State var days : [Day] = (MonthList.jan + MonthList.feb + MonthList.march + MonthList.april + MonthList.may + MonthList.june + MonthList.july + MonthList.august + MonthList.sept + MonthList.oct + MonthList.nov + MonthList.dec)
-    
-    
-    
-    
-   
-    
-   // @State var day : Day = Day(year: "2021", month: Months.March, day1: "24", dayOfWeek: "Tuesday", events: [], event: Event(title: "", type: types.pick, description: "") )
-    
-//    @State var events : [Event] = [Event(title: "", type: types.pick, description: "")]
+
     
     @State var event : Event = Event(title: "", type: types.pick, description: "")
     
     @State var pet : Pet = Pet(name: "", dogOrCat: "", type: typesOfPets.dog)
     
-
-    
-//    @State var month = Month(month: Months.January)
     
     let months = [
         Month(monthName: "January", month: Months.January, daysInMonth: MonthList.jan),
