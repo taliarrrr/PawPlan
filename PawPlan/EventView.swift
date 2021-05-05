@@ -26,7 +26,7 @@ struct EventView: View {
                         i in
                         Group{
                             Text(self.event.title)
-                                .font(Font.custom("teen", size: 25))
+                                .font(Font.custom("teen", size: 20))
                                 .foregroundColor(Color("darkPurple"))
                                 .minimumScaleFactor(0.0001)
                                 .font(.subheadline)
