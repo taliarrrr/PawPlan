@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		511A0514263AF17B0063FA30 /* AddEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511A0513263AF17B0063FA30 /* AddEvents.swift */; };
 		511F763F263C32A000B49CE2 /* MonthLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511F763E263C32A000B49CE2 /* MonthLists.swift */; };
 		517A841F26383AE6005693FF /* teen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 517A841E26383AE6005693FF /* teen.ttf */; };
 		517A842026383AE6005693FF /* teen.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 517A841E26383AE6005693FF /* teen.ttf */; };
@@ -56,7 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		511A0513263AF17B0063FA30 /* AddEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEvents.swift; sourceTree = "<group>"; };
 		511F763E263C32A000B49CE2 /* MonthLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthLists.swift; sourceTree = "<group>"; };
 		517A841E26383AE6005693FF /* teen.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = teen.ttf; sourceTree = "<group>"; };
 		51C9958625FA75C000E848C9 /* PawPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PawPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,7 +157,6 @@
 				AD938E45261F438B00C39C22 /* Pet.swift */,
 				AD938E47261F44EB00C39C22 /* InfoButtonView.swift */,
 				51DCAAFE26332FB700967C3E /* title.swift */,
-				511A0513263AF17B0063FA30 /* AddEvents.swift */,
 				511F763E263C32A000B49CE2 /* MonthLists.swift */,
 			);
 			path = PawPlan;
@@ -332,7 +329,6 @@
 				AD1ABE68260244830073AECD /* Day.swift in Sources */,
 				E3B69151261C830E003F554F /* EventDetail.swift in Sources */,
 				AD938E48261F44EB00C39C22 /* InfoButtonView.swift in Sources */,
-				511A0514263AF17B0063FA30 /* AddEvents.swift in Sources */,
 				51C9958C25FA75C000E848C9 /* SceneDelegate.swift in Sources */,
 				51DCAAFF26332FB700967C3E /* title.swift in Sources */,
 				51D85F0D26287FC700ED897D /* MonthDetail.swift in Sources */,
