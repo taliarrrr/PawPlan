@@ -28,12 +28,12 @@ struct PetView: View {
                         Text("").tag(typesOfPets.pick)
                         Text("Dog").tag(typesOfPets.dog)
                         Text("Cat").tag(typesOfPets.cat)
-                        }
                     }
                 }
             }
         }
     }
+}
 
 
 struct PetView_Previews: PreviewProvider {

@@ -11,24 +11,24 @@ import Foundation
 import UIKit
 
 struct DayView: View {
-
+    
     @Binding var day : Day
-   // @Binding var event: Event
+    
     @Environment(\.presentationMode) var presentation
     
     var body: some View {
         ZStack{
             
-             Image("background").frame(width: 390, height: 55, alignment: .bottomLeading).cornerRadius(10).scaledToFill()
+            Image("background").frame(width: 390, height: 55, alignment: .bottomLeading).cornerRadius(10).scaledToFill()
             HStack{
                 NavigationLink(destination: DayDetail(day: $day, event: $day.event)){
                     VStack{
                         HStack (alignment: .center){
-                        
+                            
                             Text("          \(day.month)" + " ").font(Font.custom("teen", size: 25))
                                 .foregroundColor(Color("darkPurple"))
                                 .lineLimit(2)
-                               
+                            
                             
                             Text(" \(day.day1)").font(Font.custom("teen", size: 25)) .foregroundColor(.black)
                                 .lineLimit(1)
@@ -46,5 +46,5 @@ struct Day_Previews: PreviewProvider {
     static var previews: some View {
         DayView(day: Binding.constant(Day(year: "", month: Months.January, day1: "", dayOfWeek: "", events: [Event](), event: Event(title: "", type: types.pick, description: ""))))
     }
-
+    
 }
