@@ -14,9 +14,9 @@ import Foundation
 
 struct ContentView: View {
     
-
+    
     @State var days : [Day] = (MonthList.jan + MonthList.feb + MonthList.march + MonthList.april + MonthList.may + MonthList.june + MonthList.july + MonthList.august + MonthList.sept + MonthList.oct + MonthList.nov + MonthList.dec)
-
+    
     
     @State var event : Event = Event(title: "", type: types.pick, description: "")
     
@@ -37,23 +37,23 @@ struct ContentView: View {
         Month(monthName: "November", month: Months.November , daysInMonth: MonthList.nov),
         Month(monthName: "December", month:Months.December, daysInMonth: MonthList.dec)]
     
-   
+    
     var body: some View {
         VStack{
-           title()
+            title()
             NavigationView{
                 List{
-                   ForEach(months.indices, id: \.self){
+                    ForEach(months.indices, id: \.self){
                         i in
-                    MonthView(days: self.$days, m: self.months[i], event: self.$event)
+                        MonthView(days: self.$days, m: self.months[i], event: self.$event)
                     }
-                
+                    
                 }.navigationBarItems(trailing: InfoButtonView(pet: $pet))
+            }
         }
     }
-        }
-        
-    }
+    
+}
 
 
 

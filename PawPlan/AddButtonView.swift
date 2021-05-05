@@ -10,11 +10,11 @@ import SwiftUI
 
 struct AddButtonView: View {
     
-
+    
     @Binding var day : Day
-   @State var newEvent: Event = Event(title: "", type: types.pick, description: "")
+    @State var newEvent: Event = Event(title: "", type: types.pick, description: "")
     @Environment(\.presentationMode) var presentation
-   
+    
     
     var body: some View {
         

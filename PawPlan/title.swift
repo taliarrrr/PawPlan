@@ -11,8 +11,8 @@ import SwiftUI
 struct title: View {
     var body: some View {
         ZStack{
-                   Text("My Calendar")
-                  .foregroundColor(Color("purple")).bold().font(Font.custom("teen", size: 30))
+            Text("My Calendar")
+                .foregroundColor(Color("purple")).bold().font(Font.custom("teen", size: 30))
         }
     }
 }

@@ -12,19 +12,18 @@ struct InfoButtonView: View {
     
     @Binding var pet : Pet
     @Environment(\.presentationMode) var presentation
-
+    
     
     var body: some View {
         
         NavigationLink(destination: PetView(pet: $pet)) {
             ZStack{
-                Ellipse().frame(width: 40, height: 30, alignment: .leading).foregroundColor(.white)
-            Text("My Pet")
-                .foregroundColor(.black).bold().font(Font.custom("teen", size: 20))
-                   
-               }
+                Text("My Pet")
+                    .foregroundColor(.black).bold().font(Font.custom("teen", size: 20))
+                
+            }
         }
-           }
+    }
 }
 
 struct InfoButtonView_Previews: PreviewProvider {

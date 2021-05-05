@@ -23,7 +23,7 @@ struct MonthDetail: View {
                     i in
                     Group{
                         if self.days[i].month == self.m.month {
-                           
+                            
                             DayView(day: self.$days[i])
                         }
                     }
